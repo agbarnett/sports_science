@@ -1,8 +1,8 @@
 # R code for searching bibliographic databases and finding the papers for the AIS audit
 
-Research conducted with the Australian Institute of Sport on statistical thinking.
+Research conducted with the Australian Institute of Sport (AIS) on statistical thinking.
 
-The code below is for an audit of published papers supported by the AIS. The PDFs were checked by a research assistant. Other features of the paper are extracted using automated screening.
+The code below is for an audit of published papers supported by the AIS. The PDFs were checked by a research assistant. Other features of the papers were extracted using automated screening.
 
 Key R packages:
 * `roadoi` for checking Open Access status
@@ -29,7 +29,7 @@ Code:
 * `5_read_pdf_comments_by_RA.R` = Read and process PDF comments added by the research assistant
 * `5_data_code_oddpub.R` = open data and code using `oddpub`
 
-* `6_combine.R` = combine the multiple data sources: automated, openalex, research assistant
+* `6_read_interpretation.R` = read the interpretations for question 14
 * `6_ra_agreement.Rmd` = report on agreement between raters in extracting data from papers
 * `6_statisticians_bmj_data.R` = extracting data from the BMJ on job titles including statisticians (not used)
 
@@ -46,7 +46,7 @@ Code:
 
 Subfolders:
 
-* `data` search results and analysis data in Excel and R format
+* `data` search results and analysis data in Excel and R format, includes a subfolder of `comments` with the research assistant's comments on each paper
 * `figures` figures 
 * `included_papers` list of the included papers
 * `reports` final reports
