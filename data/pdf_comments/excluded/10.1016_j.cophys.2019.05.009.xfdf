@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20251029132156+10'00'" flags="print" IT="HighlightNote" date="D:20251029132201+10'00'" name="79acb5be-f57d-4612-975e-3436eed076a6" page="0" coords="53.858307,319.492187,56.951614,319.492187,53.858307,314.516785,56.951614,314.516785,58.166901,318.117859,238.321503,318.117859,58.166901,310.653717,238.321503,310.653717" rect="53.702820,310.420471,238.554764,319.647675" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1b: 1 author, 1 of 1</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.492187,796.283020,319.492187"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20251029132338+10'00'" flags="print" IT="HighlightNote" date="D:20251029132342+10'00'" name="86dfb689-6f2e-4976-b956-27465aab9036" page="0" coords="311.131042,396.144409,551.305725,396.144714,311.131042,386.191864,551.305725,386.192169,311.131775,384.579163,551.338013,384.579346,311.131775,374.626587,551.338013,374.626770,311.131836,373.070557,551.273865,373.070618,311.131836,363.117981,551.273865,363.118073,311.131409,361.505066,551.338135,361.505310,311.131409,351.552490,551.338135,351.552765,311.131836,349.939758,551.334778,349.939941,311.131836,339.987183,551.334778,339.987366" rect="310.820007,339.676147,551.649170,396.455750" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2a: there was no clear aim</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="yes" page="0" rect="612.128723,237.862946,796.055359,396.262421"
+/></highlight
+><text color="#9643FC" creationdate="D:20251029132345+10'00'" flags="print,nozoom,norotate" inreplyto="86dfb689-6f2e-4976-b956-27465aab9036" date="D:20251029132345+10'00'" name="4e3fe5f0-b70a-4ec1-9cd5-7f4f50b3d3fb" icon="Comment" page="0" rect="310.820007,372.455750,334.820007,396.455750" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,304.455750,796.283020,396.455750"
+/></text
+><text color="#9643FC" creationdate="D:20251029132349+10'00'" flags="print,nozoom,norotate" inreplyto="86dfb689-6f2e-4976-b956-27465aab9036" date="D:20251029132349+10'00'" name="fa1f8650-77db-4f71-8e16-073b2b1b0140" icon="Comment" page="0" rect="310.820007,372.455750,334.820007,396.455750" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,304.455750,796.283020,396.455750"
+/></text
+><text color="#9643FC" creationdate="D:20251029132355+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132355+10'00'" name="94bb1dd5-6d0a-4d9e-ae4e-371eec54a1f2" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1a: review</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132433+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132433+10'00'" name="3d2f4ba7-a02d-420f-96fd-4f2b827a4edd" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5a: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132437+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132437+10'00'" name="5c09bfee-e5f6-4b1b-ae0d-9eecd94befd5" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132441+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132441+10'00'" name="04425ee2-cba1-409a-85a1-1236af18a563" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132446+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132446+10'00'" name="15637412-6521-4182-b50f-8b5196dc97ec" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5d: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132451+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132451+10'00'" name="9cfc5758-8a76-423e-9565-21b080164fcf" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q6: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132458+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132458+10'00'" name="907021ce-45ec-4396-8ad0-1f462ab12b98" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q10: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132504+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132504+10'00'" name="5bae339c-b802-411f-860d-a9a5c3f4c630" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q11: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132510+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132510+10'00'" name="bf6b3415-8ad3-4e67-adbd-dd3ae46de8a3" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q14a: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132847+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132847+10'00'" name="c8cda950-8951-44d0-b3ab-ddde7a46e8c8" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q14b: there was no clear practical reflections on the outcomes of the study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><text color="#9643FC" creationdate="D:20251029132850+10'00'" flags="print,nozoom,norotate" inreplyto="79acb5be-f57d-4612-975e-3436eed076a6" date="D:20251029132850+10'00'" name="b92bd718-fac3-465f-9b1c-44841e98385c" icon="Comment" page="0" rect="53.702820,295.647675,77.702820,319.647675" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q14c: </span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>Sports nutrition research should address the important questions that athletes and coaches need to consider to make evidence-based decisions about if and how to use a specific supplement. Medical supplements and sports foods can be chosen according to well-supported infor- mation about nutrient needs and nutritional goals. Unfortunately, the opportunity to undertake high qual- ity investigations of performance supplements is dwar- fed by the number of products on the market (even when these are limited to those with some evidence base) and the complexities of real-life scenarios of use that might make a difference to performance outcomes. Neverthe- less, models to conduct and interpret studies of perfor- mance supplements are available. Caffeine provides a handy illustration of the way that knowledge and prac- tice evolve in sports nutrition, with the likelihood that there is always something new or better to learn.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,227.647675,796.283020,319.647675"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20251029132924+10'00'" flags="print" IT="HighlightNote" date="D:20251029132942+10'00'" name="c3393a71-ac6a-4fc5-8d99-6082f4ec1119" page="0" coords="418.393585,453.858032,551.311646,453.858032,418.393585,443.905457,551.311646,443.905457,311.131256,442.349243,551.274292,442.349426,311.131256,432.396667,551.274292,432.396851,311.131744,430.783813,551.330627,430.783997,311.131744,420.831268,551.330627,420.831451,311.131500,419.218445,551.330811,419.218689,311.131500,409.265869,551.330811,409.266144,311.131470,407.709900,551.335327,407.710022,311.131470,397.757355,551.335327,397.757446" rect="310.820251,397.446350,551.646362,454.169067" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q3: there was no mention of previous research and no clear justification of article</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.283020,361.858032,796.283020,453.858032"
+/></highlight
+></annots
+><f href="../pdfs/10.33155_j.ramd.2020.11.004.pdf"
+/><ids original="2FF36C1346917B80DA96CCDC07964699" modified="54A26C168AE8D74C9129767D3167CDAE"
+/></xfdf
+>

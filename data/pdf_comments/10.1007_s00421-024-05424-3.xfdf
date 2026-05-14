@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120240+10'00'" flags="print" IT="HighlightNote" date="D:20250624120257+10'00'" name="9fbcf38b-8c1a-42c7-b9e5-efe1542bbbac" page="0" coords="87.392600,617.296000,134.322000,617.296000,87.392600,603.992000,134.322000,603.992000,51.023600,616.212000,85.322600,616.212000,51.023600,603.992000,85.322600,603.992000" rect="50.641700,603.576000,134.738000,617.712000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1b: 4 authors, 1, 3, 4, 6 of 7</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="595.276000,525.296000,779.276000,617.296000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120303+10'00'" flags="print" IT="HighlightNote" date="D:20250624120309+10'00'" name="96e74a53-35eb-437c-8b94-2fa2a5c50eeb" page="0" coords="111.535000,650.459000,329.388000,650.459000,111.535000,632.283000,329.388000,632.283000" rect="110.967000,631.715000,329.956000,651.027000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1a: experimental study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="yes" page="0" rect="595.276000,558.459000,779.276000,650.459000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120327+10'00'" flags="print" IT="HighlightNote" date="D:20250624120339+10'00'" name="615f295f-5b87-4496-9bff-ea080977ed83" page="1" coords="454.357000,98.340200,544.200000,98.340200,454.357000,83.250300,544.200000,83.250300,306.134000,85.840200,544.100000,85.840200,306.134000,70.750300,544.100000,70.750300" rect="305.662000,70.278700,544.671000,98.811700" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2a: yes a well formed aim</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="yes" page="1" rect="595.199000,-57.423000,779.126000,100.977000"
+/></highlight
+><text color="#9643FC" creationdate="D:20250624120343+10'00'" flags="print,nozoom,norotate" inreplyto="615f295f-5b87-4496-9bff-ea080977ed83" date="D:20250624120343+10'00'" name="5b9a53ae-929f-40c3-a48b-26c121b53e33" icon="Comment" page="1" rect="305.662000,74.811700,329.662000,98.811700" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2b: 1 aim</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276000,6.811740,779.276000,98.811700"
+/></text
+><text color="#9643FC" creationdate="D:20250624120346+10'00'" flags="print,nozoom,norotate" inreplyto="615f295f-5b87-4496-9bff-ea080977ed83" date="D:20250624120346+10'00'" name="65a58c2b-738d-47fb-8f2d-54a4fcf68033" icon="Comment" page="1" rect="305.662000,74.811700,329.662000,98.811700" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2c: PICO</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276000,6.811740,779.276000,98.811700"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120830+10'00'" flags="print" IT="HighlightNote" date="D:20250624120908+10'00'" name="ba26552c-b60c-43fb-b2ef-6b85294cbe67" page="1" coords="317.474000,210.840000,544.246000,210.840000,317.474000,195.750000,544.246000,195.750000,306.134000,198.340000,544.212000,198.340000,306.134000,183.250000,544.212000,183.250000,306.134000,185.840000,544.245000,185.840000,306.134000,170.750000,544.245000,170.750000,306.134000,173.340000,544.420000,173.340000,306.134000,158.250000,544.420000,158.250000,306.134000,160.840000,544.264000,160.840000,306.134000,145.750000,544.264000,145.750000,306.134000,148.340000,544.194000,148.340000,306.134000,133.250000,544.194000,133.250000,306.134000,135.840000,544.244000,135.840000,306.134000,120.750000,544.244000,120.750000,306.134000,123.340000,544.298000,123.340000,306.134000,108.250000,544.298000,108.250000,306.134000,110.840000,544.287000,110.840000,306.134000,95.750300,544.287000,95.750300,306.134000,98.340200,446.847000,98.340200,306.134000,83.250300,446.847000,83.250300" rect="305.662000,82.778700,544.891000,211.312000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q3: there was no previous research on the specific research questions of this study. This article is justified as more evidence is needed.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276000,118.840000,779.276000,210.840000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120410+10'00'" flags="print" IT="HighlightNote" date="D:20250624120423+10'00'" name="b292bbaf-5eb1-4c12-877a-41321bdf4e0e" page="2" coords="51.023600,449.220000,289.072000,449.220000,51.023600,434.130000,289.072000,434.130000,51.023600,436.720000,289.134000,436.720000,51.023600,421.630000,289.134000,421.630000,51.023700,424.220000,289.247000,424.220000,51.023700,409.130000,289.247000,409.130000,51.023700,411.720000,289.183000,411.720000,51.023700,396.630000,289.183000,396.630000,51.023700,399.220000,289.130000,399.220000,51.023700,384.130000,289.130000,384.130000,51.023700,386.720000,264.207000,386.720000,51.023700,371.630000,264.207000,371.630000" rect="50.552000,371.159000,289.719000,449.692000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5a: yes there was sample size calculation for the study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="yes" page="2" rect="595.199000,229.267000,779.126000,449.194000"
+/></highlight
+><text color="#9643FC" creationdate="D:20250624120454+10'00'" flags="print,nozoom,norotate" inreplyto="b292bbaf-5eb1-4c12-877a-41321bdf4e0e" date="D:20250624120454+10'00'" name="88f9d444-14bb-49b7-97d0-7cac4a0520c0" icon="Comment" page="2" rect="50.552000,425.692000,74.552000,449.692000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5b: there was no reference or justification for the sample size calculation</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.276000,357.692000,779.276000,449.692000"
+/></text
+><text color="#9643FC" creationdate="D:20250624120508+10'00'" flags="print,nozoom,norotate" inreplyto="b292bbaf-5eb1-4c12-877a-41321bdf4e0e" date="D:20250624120508+10'00'" name="5ffcba28-8200-4cd6-9306-3a661b925303" icon="Comment" page="2" rect="50.552000,425.692000,74.552000,449.692000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5c: 24</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.276000,357.692000,779.276000,449.692000"
+/></text
+><text color="#9643FC" creationdate="D:20250624120514+10'00'" flags="print,nozoom,norotate" inreplyto="b292bbaf-5eb1-4c12-877a-41321bdf4e0e" date="D:20250624120514+10'00'" name="8fd50b9d-6ced-4b99-9896-73610cb8918c" icon="Comment" page="2" rect="50.552000,425.692000,74.552000,449.692000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5d: 31</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.276000,357.692000,779.276000,449.692000"
+/></text
+><text color="#9643FC" creationdate="D:20250624120606+10'00'" flags="print,nozoom,norotate" inreplyto="b292bbaf-5eb1-4c12-877a-41321bdf4e0e" date="D:20260213082507+10'00'" name="77ffb86b-75c6-44fc-ab10-4508c2d9da45" icon="Comment" page="2" rect="50.552000,425.692000,74.552000,449.692000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q6: 31 male, 0 female</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.276000,357.692000,779.276000,449.692000"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120626+10'00'" flags="print" IT="HighlightNote" date="D:20250624120631+10'00'" name="7b301050-3178-4d4e-bde9-ebe1cf2a8ded" page="4" coords="117.480000,136.813000,289.243000,136.813000,117.480000,121.723000,289.243000,121.723000,51.003600,124.313000,288.965000,124.313000,51.003600,109.223000,288.965000,109.223000,51.003600,111.813000,289.060000,111.813000,51.003600,96.723300,289.060000,96.723300" rect="50.532000,96.251700,289.715000,137.285000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q10: yes missing data were reported</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="4" rect="595.276000,44.813100,779.276000,136.813000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120651+10'00'" flags="print" IT="HighlightNote" date="D:20250624120659+10'00'" name="2b272b65-8625-4c15-a11d-59a8f5185885" page="4" coords="306.142000,313.451000,407.157000,313.451000,306.142000,298.583000,407.157000,298.583000" rect="305.677000,298.119000,407.621000,313.916000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q11: no outliers were seen reported</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="4" rect="595.276000,221.451000,779.276000,313.451000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120720+10'00'" flags="print" IT="HighlightNote" date="D:20250624120726+10'00'" name="9838015b-3163-4bb5-905f-ed48029d323d" page="6" coords="530.674000,311.600000,544.137000,311.600000,530.674000,296.510000,544.137000,296.510000,306.142000,299.100000,544.059000,299.100000,306.142000,284.010000,544.059000,284.010000,306.142000,286.600000,544.320000,286.600000,306.142000,271.510000,544.320000,271.510000,306.142000,274.100000,309.472000,274.100000,306.142000,259.010000,309.472000,259.010000,309.482000,274.100000,314.522000,274.100000,309.482000,260.820000,314.522000,260.820000,315.792000,274.100000,474.170000,274.100000,315.792000,259.010000,474.170000,259.010000,474.180000,274.100000,479.220000,274.100000,474.180000,260.820000,479.220000,260.820000,480.442000,274.100000,544.271000,274.100000,480.442000,259.010000,544.271000,259.010000,306.142000,261.600000,464.828000,261.600000,306.142000,246.510000,464.828000,246.510000,464.822000,261.600000,469.862000,261.600000,464.822000,248.320000,469.862000,248.320000,471.252000,261.600000,544.287000,261.600000,471.252000,246.510000,544.287000,246.510000,306.142000,249.100000,544.271000,249.100000,306.142000,234.010000,544.271000,234.010000" rect="305.670000,233.539000,544.792000,312.072000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14a: yes the aim of the study was answered</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="595.276000,219.600000,779.276000,311.600000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120735+10'00'" flags="print" IT="HighlightNote" date="D:20250624120747+10'00'" name="89c17143-7255-43dc-b606-6daa5ec00c1b" page="10" coords="306.142000,325.858000,420.417000,325.858000,306.142000,310.990000,420.417000,310.990000" rect="305.677000,310.526000,420.882000,326.323000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14b: yes there were practical reflections on the outcomes of the study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="10" rect="595.276000,233.858000,779.276000,325.858000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250624120801+10'00'" flags="print" IT="HighlightNote" date="D:20250624120804+10'00'" name="968b10bb-313f-47a8-bcdb-d0734ee442df" page="10" coords="306.142000,299.220000,544.255000,299.220000,306.142000,284.130000,544.255000,284.130000,306.142000,286.720000,544.226000,286.720000,306.142000,271.630000,544.226000,271.630000,306.142000,274.220000,544.263000,274.220000,306.142000,259.130000,544.263000,259.130000,306.142000,261.720000,544.296000,261.720000,306.142000,246.630000,544.296000,246.630000,306.142000,249.220000,544.402000,249.220000,306.142000,234.130000,544.402000,234.130000,306.142000,236.720000,544.103000,236.720000,306.142000,221.630000,544.103000,221.630000,306.142000,224.220000,544.150000,224.220000,306.142000,209.130000,544.150000,209.130000,306.142000,211.720000,544.295000,211.720000,306.142000,196.630000,544.295000,196.630000,306.142000,199.220000,544.110000,199.220000,306.142000,184.130000,544.110000,184.130000,306.142000,186.720000,544.182000,186.720000,306.142000,171.630000,544.182000,171.630000,306.142000,174.220000,544.100000,174.220000,306.142000,159.130000,544.100000,159.130000,306.142000,161.720000,544.090000,161.720000,306.142000,146.630000,544.090000,146.630000,306.142000,149.220000,544.318000,149.220000,306.142000,134.130000,544.318000,134.130000,306.142000,136.720000,544.070000,136.720000,306.142000,121.630000,544.070000,121.630000,306.142000,124.220000,544.314000,124.220000,306.142000,109.130000,544.314000,109.130000,306.142000,111.720000,544.345000,111.720000,306.142000,96.630300,544.345000,96.630300,306.142000,99.220200,455.016000,99.220200,306.142000,84.130300,455.016000,84.130300" rect="305.670000,83.658700,544.874000,299.692000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14c: </span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Post-resistance exercise water immersion strategies,&#xD;such as CWI, HWI, etc., may be used to provide trivialto-&#xD;moderate reductions in muscle damage (i.e., CK)&#xD;following a 4-week in-season schedule in highly trained&#xD;athletes. Water immersion strategies as utilised in this&#xD;study, may be prescribed for highly trained athletes&#xD;during an in-season competition phase, posing little risk&#xD;of attenuating inflammatory adaptative responses. These&#xD;results support the notion that water immersion may be&#xD;periodised, i.e., the use of hot increases systemic growth&#xD;factor circulation (i.e., PDGF-BB, IGF-1), while the use&#xD;of cold increases thermo-sensitive systemic heat shock&#xD;protein (i.e., HSP-72) circulation. Practitioners working&#xD;with athletes should consider individual responses, e.g.,&#xD;as evident by mean ± 95% confidence interval ranges, to&#xD;post-resistance exercise recovery strategies to identify&#xD;each athlete’s ‘adaptive sweet spot’.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="10" rect="595.276000,207.220000,779.276000,299.220000"
+/></highlight
+></annots
+><f href="../pdfs/10.1007_s00421-024-05424-3.pdf"
+/><ids original="9211F60C6B5E0F4DAAE0F38C5E4A7881" modified="8BAB6DF70DCE534C9CC6417AF562CB68"
+/></xfdf
+>

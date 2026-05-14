@@ -1,0 +1,60 @@
+---
+title: "Checks of data entry"
+author: "Adrian Barnett"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+library(dplyr)
+library(flextable)
+
+TeachingDemos::char2seed('southampton')
+n_sample = 20
+```
+
+We randomly selected a subsample of the processed data to manually verify the data entry and processing.
+
+## Data from Research Assistant
+
+```{r ra}
+# data from 5_read_pdf_comments_by_RA.R
+load('data/5_audit.RData')
+# sample and table
+sample = filter(long, question != 'interpretation') %>% # interpretation is not processed, so do not use
+  sample_n(n_sample) %>%
+  select(doi, question, response)
+ftab = flextable(sample) %>%
+  theme_box() %>% 
+  autofit()
+ftab
+```
+
+## Data from automation
+
+```{r automation}
+# data from 5_read_pdf_files_to_xml_automate.R
+load('data/5_automated.RData')
+# sample and table
+sample = sample_n(auto_data, n_sample) %>%
+  select(doi, protocol, analysis_plan, ethics, equator, conflict, funding, registration)
+ftab = flextable(sample) %>%
+  theme_box() %>% 
+  autofit()
+ftab
+```
+
+## Data from OpenAlex
+
+```{r openalex}
+# data from 5_open_alex.R
+load('data/5_open_alex.RData')
+# sample and table
+sample = sample_n(open_alex_data, n_sample) %>%
+  select(doi, n_total, n_ais, first_author, last_author, cited)
+ftab = flextable(sample) %>%
+  theme_box() %>% 
+  autofit()
+ftab
+```

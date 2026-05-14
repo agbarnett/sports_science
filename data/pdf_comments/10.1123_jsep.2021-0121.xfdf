@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103253+10'00'" flags="print" IT="HighlightNote" date="D:20250709103259+10'00'" name="ac811bb7-4eab-4f79-bba1-cad5ae20daec" page="0" coords="235.446136,621.858582,292.327789,621.858582,235.446136,607.731140,292.327789,607.731140,201.486603,620.667053,231.835937,620.667053,201.486603,607.731140,231.835937,607.731140" rect="201.082352,607.289673,292.769287,622.300049" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1b: 2 authors, 1, 2 of 2</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.000000,529.858582,796.000000,621.858582"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103304+10'00'" flags="print" IT="HighlightNote" date="D:20250709103307+10'00'" name="c8c48de9-5312-4f02-9407-9138e208124d" page="1" coords="364.083099,595.551392,462.154297,595.551392,364.083099,584.521423,462.154297,584.521423" rect="363.738403,584.176758,462.498993,595.896118" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1a: experimental study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,503.551392,796.000000,595.551392"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103315+10'00'" flags="print" IT="HighlightNote" date="D:20250709103321+10'00'" name="e41d2b7f-7e4c-4454-b850-6e30a7fd5501" page="1" coords="36.000000,84.238190,95.214615,84.038300,36.000000,73.208267,95.214615,73.208267,104.598694,84.238190,168.607513,84.238190,104.598694,73.208267,168.607513,73.208267,97.171616,82.258194,102.581680,82.258194,97.171616,72.378326,102.581680,72.378326" rect="35.661560,72.069580,168.952209,84.582886" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5a: no sample size calculation seen</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="yes" page="1" rect="612.128723,40.846359,796.055359,269.936401"
+/></highlight
+><text color="#9643FC" creationdate="D:20250709103326+10'00'" flags="print,nozoom,norotate" inreplyto="e41d2b7f-7e4c-4454-b850-6e30a7fd5501" date="D:20250709103326+10'00'" name="9b206ddf-316d-43bc-84a9-e574c6d03ee4" icon="Comment" page="1" rect="35.661560,60.582886,59.661560,84.582886" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,-7.417114,796.000000,84.582886"
+/></text
+><text color="#9643FC" creationdate="D:20250709103330+10'00'" flags="print,nozoom,norotate" inreplyto="e41d2b7f-7e4c-4454-b850-6e30a7fd5501" date="D:20250709103330+10'00'" name="a95158f0-c791-414e-bbd1-7145fb954d46" icon="Comment" page="1" rect="35.661560,60.582886,59.661560,84.582886" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,-7.417114,796.000000,84.582886"
+/></text
+><text color="#9643FC" creationdate="D:20250709103334+10'00'" flags="print,nozoom,norotate" inreplyto="e41d2b7f-7e4c-4454-b850-6e30a7fd5501" date="D:20250709103339+10'00'" name="e4b55d87-e4ee-4143-851e-0427a7dc95e0" icon="Comment" page="1" rect="35.661560,60.582886,59.661560,84.582886" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5d: 48</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,-7.417114,796.000000,84.582886"
+/></text
+><text color="#9643FC" creationdate="D:20250709103410+10'00'" flags="print,nozoom,norotate" inreplyto="e41d2b7f-7e4c-4454-b850-6e30a7fd5501" date="D:20250709103410+10'00'" name="82171a52-c57f-44cd-8207-d137ed81f29b" icon="Comment" page="1" rect="35.661560,60.582886,59.661560,84.582886" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q6: 38 male, 10 female</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,-7.417114,796.000000,84.582886"
+/></text
+><text color="#9643FC" creationdate="D:20250709103441+10'00'" flags="print,nozoom,norotate" inreplyto="e41d2b7f-7e4c-4454-b850-6e30a7fd5501" date="D:20250709103441+10'00'" name="66e62a04-3f84-43cb-aaf4-33fb119ed317" icon="Comment" page="1" rect="35.661560,60.582886,59.661560,84.582886" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q10: no missing data were seen reported</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,-7.417114,796.000000,84.582886"
+/></text
+><text color="#9643FC" creationdate="D:20250709103446+10'00'" flags="print,nozoom,norotate" inreplyto="e41d2b7f-7e4c-4454-b850-6e30a7fd5501" date="D:20250709103446+10'00'" name="cb3f16a1-3103-453b-8d02-eda5d6565ac8" icon="Comment" page="1" rect="35.661560,60.582886,59.661560,84.582886" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q11: no outliers were seen reported</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,-7.417114,796.000000,84.582886"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103517+10'00'" flags="print" IT="HighlightNote" date="D:20250709103554+10'00'" name="6e3f9c58-3801-46da-98f7-4ed2c0546eab" page="1" coords="35.998001,494.689178,298.950684,494.689178,35.998001,483.659241,298.950684,483.659241,35.996994,483.577057,298.937073,483.577057,35.996994,472.547119,298.937073,472.547119,35.996994,472.464935,298.948425,472.464935,35.996994,461.434998,298.948425,461.434998,35.996994,461.409821,149.352203,461.409821,35.996994,450.379883,149.352203,450.379883" rect="35.652298,450.035187,299.295380,495.033875" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q2a: there were two research questions that were well formed</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,402.689178,796.000000,494.689178"
+/></highlight
+><text color="#9643FC" creationdate="D:20250709103601+10'00'" flags="print,nozoom,norotate" inreplyto="6e3f9c58-3801-46da-98f7-4ed2c0546eab" date="D:20250709103601+10'00'" name="c6491c07-4d57-4473-bcfe-e817a05ee2aa" icon="Comment" page="1" rect="35.652298,471.033875,59.652298,495.033875" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2b: 2 research questions</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,403.033875,796.000000,495.033875"
+/></text
+><text color="#9643FC" creationdate="D:20250709103723+10'00'" flags="print,nozoom,norotate" inreplyto="6e3f9c58-3801-46da-98f7-4ed2c0546eab" date="D:20250709103723+10'00'" name="a38120b9-4ae5-48ff-9768-8cc078dbb993" icon="Comment" page="1" rect="35.652298,471.033875,59.652298,495.033875" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2c: research question 1: PO&#xD;</span
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>research question 2: PO</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,403.033875,796.000000,495.033875"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103924+10'00'" flags="print" IT="HighlightNote" date="D:20250709103948+10'00'" name="8bd79498-9668-4081-a327-e714f5ce4d45" page="1" coords="103.916763,594.698242,298.956055,594.698242,103.916763,583.668335,298.956055,583.668335,35.998001,583.586182,298.960876,583.586182,35.998001,572.556213,298.960876,572.556213,35.998001,572.473999,298.907196,572.473999,35.998001,561.444092,298.907196,561.444092,35.998001,561.361938,298.958130,561.361938,35.998001,550.331970,298.958130,550.331970,35.998001,550.249756,298.938843,550.249756,35.998001,539.219849,298.938843,539.219849,35.998001,539.137695,299.005310,539.137695,35.998001,528.107727,299.005310,528.107727,35.998001,528.025513,298.971863,528.025513,35.998001,516.995605,298.971863,516.995605,35.998001,516.913452,298.940979,516.913452,35.998001,505.883484,298.940979,505.883484,35.998001,505.801300,299.007019,505.801300,35.998001,494.771362,299.007019,494.771362" rect="35.653305,494.426666,299.351715,595.042969" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q3: yes there was previous research on this topic. This article justified as previous research had method flaws and more evidence was needed.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,502.698242,796.000000,594.698242"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103741+10'00'" flags="print" IT="HighlightNote" date="D:20250709103748+10'00'" name="b4a8d289-a3b8-40b1-8c6d-9cb9966f732f" page="4" coords="64.510300,295.419189,298.973328,295.419189,64.510300,284.389282,298.973328,284.389282,36.000000,284.307068,298.960754,284.307068,36.000000,273.277161,298.960754,273.277161,36.000000,273.194946,299.014618,273.194946,36.000000,262.165039,299.014618,262.165039,36.000000,262.082855,161.184540,262.082855,36.000000,251.052933,161.184540,251.052933" rect="35.655304,250.708237,299.359314,295.763885" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14a: yes the research questions were answered</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="4" rect="612.000000,203.419189,796.000000,295.419189"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103817+10'00'" flags="print" IT="HighlightNote" date="D:20250709103832+10'00'" name="a96d420d-f979-4ad3-abdf-82caa70e610a" page="5" coords="266.684326,73.122711,298.934875,73.122711,266.684326,62.092789,298.934875,62.092789,35.999954,62.010605,298.934021,62.010605,35.999954,50.980682,298.934021,50.980682,35.999954,50.898499,298.999023,50.898499,35.999954,39.868576,298.999023,39.868576" rect="35.655258,39.523880,299.343719,73.467407" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14b: there was limited practical reflections on the outcomes of the study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="5" rect="612.000000,-18.877289,796.000000,73.122711"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709103852+10'00'" flags="print" IT="HighlightNote" date="D:20250709103855+10'00'" name="9360b3ec-7010-49d0-852c-477170203115" page="5" coords="354.419281,463.859650,576.057922,463.859650,354.419281,452.829712,576.057922,452.829712,313.004761,452.861542,576.125305,452.861542,313.004761,441.831604,576.125305,441.831604,313.005737,441.863434,576.134277,441.863434,313.005737,430.833496,576.134277,430.833496,313.005737,430.865326,575.946838,430.865326,313.005737,419.835388,575.946838,419.835388,313.005737,419.867218,576.007813,419.867218,313.005737,408.837280,576.007813,408.837280,313.005737,408.869110,575.990295,408.869110,313.005737,397.839172,575.990295,397.839172,313.005737,397.871002,576.007751,397.871002,313.005737,386.841064,576.007751,386.841064,313.005737,386.872894,517.731812,386.872894,313.005737,375.842957,517.731812,375.842957" rect="312.660065,375.498260,576.479004,464.204346" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14c: </span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Our PField test revealed that novices had a larger peripheral&#xD;field of view; however, when a sports-specific action response&#xD;was required, the expert advantage became apparent. Experts were&#xD;able to respond to a teammate appearing in their periphery at greater&#xD;distance from central vision, and more accurately, suggesting their&#xD;years of practice results in superior action organization and attunement&#xD;to sport specific information appearing in their far periphery and&#xD;better able to use it to support the control of action.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="5" rect="612.000000,371.859650,796.000000,463.859650"
+/></highlight
+></annots
+><f href="10.1123_jsep.2021-0121.pdf"
+/><ids original="F5DCAAE00315F2C9DCD74F108C97A6FD" modified="270BED1BC0DFB240BE18E7AD343EE57C"
+/></xfdf
+>

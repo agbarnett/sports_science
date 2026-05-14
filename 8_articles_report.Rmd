@@ -1,0 +1,1379 @@
+---
+title: "Statistical Thinking report on published Australian Institute of Sport research from 2000 to 2024"
+output: word_document
+date: "`r format(Sys.time(), '%d %B %Y')`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+library(dplyr)
+library(flextable)
+library(tidyr)
+library(janitor)
+library(stringr)
+library(binom) # for intervals
+source('99_functions.R') # for CI function
+# plots:
+library(ggplot2)
+g.theme = theme_bw() + theme(panel.grid.minor = element_blank())
+library(naniar) # for missing plots
+
+# for search date
+load('data/1_pubmed_papers.RData')
+remove(data); pubmed_search_date = search_date
+
+# all data sources, from 7_combine_data.R
+load('data/7_analysis.RData') # 
+```
+
+Papers with AIS-supported authors were found by combining searches from papers found in _PubMed_ and _Scopus_ and a search provided by the AIS. The search was conducted on `r format(pubmed_search_date, '%d %B, %Y')`. The _OpenAlex_ database was searched on `r format(open_alex_search_date, '%d %B, %Y')`. 
+
+## Methods
+
+We use descriptive statistics with plots, tables and summary statistics. 
+For summary statistics for continuous variables, we use the median and first to third quartile (Q1 to Q3). 
+When confidence intervals are given for binomial data, we use the Wilson score interval to avoid any problems with the normal approximation given our relatively small sample size. 
+
+## Papers by publication year
+
+We included papers for the years 2020 to 2024.
+
+```{r papers_year}
+tab = mutate(open_alex_data, publication_year = as.numeric(format(date, '%Y'))) %>%
+  group_by(publication_year) %>%
+  tally()
+# stats for big summary table
+year_stats = mutate(open_alex_data, publication_year = as.numeric(format(date, '%Y'))) %>%
+  summarise(q1 = quantile(publication_year, 0.25),
+            median = median(publication_year),
+            q3 = quantile(publication_year, 0.75)) %>%
+  mutate(
+    var = 'Year published', 
+    stats = paste(median, ' [', q1, ' to ', q3, ']', sep='')) %>%
+  select(-median, -q1, -q3) 
+#
+bplot = ggplot(data = tab, aes(x = publication_year, y = n))+
+  geom_bar(stat='identity', col='grey22', size=0.1, fill='darkseagreen3')+
+  xlab('Year')+
+  ylab('Number of papers')+
+  g.theme
+bplot
+```
+
+The total number of papers is `r nrow(papers)`. The most papers were in 2020. The slight left skew towards earlier years is because papers with two dates (electronic and print) are shown using the earliest date. The double-dates for all papers means that some papers above have an earliest date prior to 2020.
+
+# Section 1: Study design basics and authorship
+
+## Study design (Q1a)
+
+This question was evaluated by the research assistant.
+
+```{r design}
+#
+tab = tabyl(type, type) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  mutate(percent = round(percent*100)) %>%
+  rename('Study design' = 'type') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# for summary table
+stats_type = rename(tab, 'var' = 'Study design') %>%
+  mutate(stats = paste(n, ' (', percent, ')', sep='')) %>%
+  select('var', 'stats')
+```
+
+The "protocol" category was not in our study protocol, but was added after data collection.
+
+The most common study design was an observational study. The "Other" category included audits, editorials, interviews, and position statements. 
+
+
+## Author numbers per paper (Q1b)
+
+This question was evaluated by the research assistant.
+
+```{r anumbs}
+# number of AIS authors
+stats1 = summarise(ais_authors, N = n(), 
+                   Min = min(number),
+                   Q1 = round(quantile(number, 0.25)),
+                   Median = round(quantile(number, 0.5)),
+                   Q3 = round(quantile(number, 0.75)),
+                   Max = round(max(number))) %>%
+  mutate(Count = 'AIS authors')
+# total number of authors
+stats2 = summarise(ais_authors, N = n(), 
+                   Min = min(total),
+                   Q1 = round(quantile(total, 0.25)),
+                   Median = round(quantile(total, 0.5)),
+                   Q3 = round(quantile(total, 0.75)),
+                   Max = round(max(total))) %>%
+  mutate(Count = 'Total authors')
+stats = bind_rows(stats1, stats2) %>%
+  select(Count, everything()) # column ordering
+ftab = flextable(stats) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# for summary table
+stats_ais_authors = mutate(stats1, 
+    stats = paste(Median, ' [', Q1, ' to ', Q3, ']', sep='')) %>%
+  rename('var' = 'Count') %>%
+  select('var', 'stats')
+```
+
+The table shows the summary statistics for the number of authors with an AIS affiliation and the total number of authors.
+
+## Were the authors with an AIS affiliation in first or last position (Q1b)
+
+This question was evaluated by the research assistant.
+
+```{r first_last}
+# 
+tab1 = tabyl(ais_authors, first) %>%
+  adorn_totals(where='row') %>%
+  mutate(percent = round(percent*100)) %>%
+  rename('Response' = 'first') %>%
+  mutate('Position' = 'First') %>%
+  filter(Response !='Total') # can remove total row as table 2 has the same total
+tab2 = tabyl(ais_authors, last) %>%
+  adorn_totals(where='row') %>%
+  mutate(percent = round(percent*100)) %>%
+  rename('Response' = 'last') %>%
+  mutate('Position' = 'Last')
+tab = bind_rows(tab1, tab2) %>%
+  select(Position, Response, everything()) %>% # column ordering
+  mutate(Response = case_when(
+    Response == 'FALSE' ~ 'No',
+    Response == 'TRUE' ~ 'Yes',
+    Response == 'Total' ~ 'Total'
+  ),
+  Position = ifelse(Response=='Total', '', Position)) # separate total from either position
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  merge_v(j=1) %>%
+  autofit()
+ftab
+```
+
+
+First position is often seen as the author who has done the most work, whilst last position is often seen as the most senior author. 
+
+## Was any author a statistician or methodologist? (Q1c)
+
+This question was dropped from the analysis as we could not find a reliable automated method to identify statisticians and the manual method was too time consuming given the number of authors.
+
+# Section 2: Research question(s) and/or study aim(s)
+
+## Q2a: Did the paper have a well-formed research question or study aim? 
+
+```{r well_formed_ex, include=FALSE}
+n_exclude = filter(question, question == 'Not applicable') %>% nrow()
+```
+
+This question was evaluated by the research assistant.
+We excluded `r n_exclude` papers where this was not applicable: an opinion piece and an infographic.
+
+```{r well_formed}
+for_table = filter(question, question != 'Not applicable')
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, question) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Well formed question' = 'question') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q2a = filter(tab, `Well formed question` == 'Yes') %>%
+  mutate(qnum = 'q2a',
+         qlabel  = 'Well-formed research question',
+         Number = N)
+```
+
+The category of "Purpose/Objective/Statement/Goal" was for papers that used a goal, objective, etc, instead of a research question. 
+Most papers had a well-formed question or goal, although 20% without a well-formed question is still relatively large given the importance of stating a clear question. 
+
+## Q2b: How many research questions or study aims were there?
+
+```{r qnum_ex, include=FALSE}
+n_exclude = filter(question_number, question == 'Not applicable') %>% nrow()
+```
+
+This question was evaluated by the research assistant. We excluded `r n_exclude` papers where the number of questions was not applicable, including those papers that did not have a well-formed question. 
+
+```{r qnum}
+# remove not applicable
+for_table = filter(question_number, question != 'Not applicable')
+# 
+tab1 = tabyl(for_table, aims_n) %>%
+  adorn_totals(where='row') %>%
+  mutate(percent = round(percent*100)) %>%
+  rename('Number' = 'aims_n') %>%
+  mutate('Type' = 'Aims')
+tab2 = tabyl(for_table, question_n) %>%
+  adorn_totals(where='row') %>%
+  mutate(percent = round(percent*100)) %>%
+  rename('Number' = 'question_n') %>%
+  mutate('Type' = 'Questions')
+tab3 = tabyl(for_table, purpose_n) %>%
+  adorn_totals(where='row') %>%
+  mutate(percent = round(percent*100)) %>%
+  rename('Number' = 'purpose_n') %>%
+  mutate('Type' = 'Other')
+# make columns
+tab = bind_rows(tab1, tab2, tab3) %>%
+  mutate(cell = paste(n, ' (', percent, ')', sep='')) %>%
+  select(Type, Number, cell) %>% # column ordering
+  mutate(Number = ifelse(is.na(Number), "Missing", Number)) %>%
+  pivot_wider(values_from = 'cell', names_from = 'Type') %>%
+  arrange(Number) %>%
+  mutate(Aims = replace_na(Aims, '0'),
+         Questions = replace_na(Questions, '0'),
+         Other = replace_na(Other, '0'))
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# missing - none
+any_missing = filter(for_table, is_na(aims_n) & is_na(purpose_n) & is_na(question_n)) %>% nrow()
+```
+
+After data collection, we added another category of "Other" because there were many papers that used a purpose, goal or objective instead of a research question or aim. 
+Most papers had between 1 to 2 aims or questions. 
+
+The table shows some missing for each type of question; however, there were no papers that were missing for all three types (aims, questions and other).
+
+## Q2c: Can the question(s)/aim(s) be expressed using an established framework?
+
+This question was evaluated by the research assistant. This information was often difficult to extract and there was a low inter-rater agreement in the random sample of 30 papers. Hence, we decided not to include this question in the main paper.
+
+
+# Section 3: Prior research and planning
+
+## Q3: Was there previous research on the same question(s) or aim(s)? (Did they cite a review or do their own review?) 
+
+```{r prior_ex}
+# 
+# full_join(prior, type, by='doi') %>% filter(prior == 'Not applicable') %>% pull(comment)
+n_exclude = filter(prior, prior == 'Not applicable') %>% nrow()
+```
+
+This question was evaluated by the research assistant. We excluded `r n_exclude` papers where this was not applicable, e.g., an opinion piece and an infographic.
+
+```{r prior}
+for_table = filter(prior, prior != 'Not applicable')
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, prior) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Previous research' = 'prior') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q3 = filter(tab, `Previous research` == 'Mentioned but this research justified') %>%
+  mutate(qnum = 'q3',
+         qlabel  = 'Research justified',
+         Number = N)
+```
+
+Almost all papers (90%) mentioned previous research and gave a reason why this research was justified. 
+
+## Q4a: Was there a study protocol and/or analysis plan? 
+
+```{r protocol_exclude, include = FALSE}
+# exclude 
+pattern = 'infographic|editorial|opinion|statement|commentary|protocol' # primer?
+n_exclude = full_join(auto_data, type, by='doi') %>%
+  filter(str_detect(comment, pattern)) %>%
+  nrow()
+# for text
+exclude_text = str_split(pattern, '\\|')[[1]]
+```
+
+The data for this question was extracted using an automated search of the PDFs. We excluded `r n_exclude` papers that were one of: `r paste(exclude_text, collapse=', ')`.
+
+In a change to our protocol, the study protocol question was dropped because for many papers in sports science the "protocol" means the training regimen; hence, there were many false positive matches. We were able to search for analysis plans. 
+
+
+```{r protocol}
+for_table = full_join(auto_data, type, by='doi') %>%
+  filter(!str_detect(comment, pattern),
+         doi != '999') # this paper could not be screened as the tool needed a DOI
+# 
+N = nrow(for_table)
+tab = tabyl(for_table, analysis_plan) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Analysis plan' = 'analysis_plan') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q4a = filter(tab, `Analysis plan` == TRUE) %>%
+  mutate(qnum = 'q4a',
+         qlabel  = 'Analysis plan',
+         Number = N)
+```
+
+The results show that analysis plans were very rarely used.
+
+## Q4b: Was the study pre-registered, e.g., ANZCTR or clintrials.gov?
+
+The data for this question was extracted using an automated search of the PDFs. We excluded `r n_exclude` papers that were one of: `r paste(exclude_text, collapse=', ')`.
+
+```{r anzctr}
+# use same data as above with ineligible papers excluded
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, registration) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Pre-registered' = 'registration') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q4b = filter(tab, `Pre-registered` == TRUE) %>%
+  mutate(qnum = 'q4b',
+         qlabel  = 'Pre-registered',
+         Number = N)
+```
+
+Few studies were pre-registered.
+
+# Section 4: Sample size
+
+## Q5a: Was there a sample size calculation for the research question or study aim? 
+
+This question was evaluated by the research assistant.
+We excluded papers where this was not applicable, e.g., reviews.
+
+```{r sample_size}
+for_table = filter(sample_size, any_sample_size != 'Not applicable') 
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, any_sample_size) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Sample size calculation' = 'any_sample_size') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q5a = filter(tab, `Sample size calculation` == 'Yes') %>%
+  mutate(qnum = 'q5a',
+         qlabel  = 'Sample size calculation',
+         Number = N)
+```
+
+Many studies did not give a sample size calculation. 
+
+## Q5b: Was the effect size justified in the sample size calculation? 
+
+This question was evaluated by the research assistant.
+This was only for papers where the response to Q5a was "Yes".
+
+```{r justified}
+# need to merge two source because of conditional
+for_table = full_join(sample_size, sample_size_justified, by='doi') %>%
+  filter(any_sample_size == 'Yes')
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, sample_size_justified) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Effect size justified' = 'sample_size_justified') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q5b = filter(tab, `Effect size justified` == 'Yes') %>%
+  mutate(qnum = 'q5b',
+         qlabel  = 'Effect size justified in sample size calculation',
+         Number = N)
+```
+
+Over half of studies with a sample size calculation provided a justification for the sample size. 
+
+Some studies cited a previous study in their sample size calculation; we took classified this as not justifying the effect size as the citation needed to be supported by some reasoning from the authors. 
+
+## Q5c: What was the target sample size? 
+
+This question was evaluated by the research assistant. 
+We only included papers that had a sample size calculation.
+
+```{r target}
+# could split by type (but too small)
+for_stats = full_join(sample_size_target, sample_size, by='doi') %>%
+  filter(any_sample_size == 'Yes')
+#
+stats = summarise(for_stats,
+            N = n(), 
+            Missing = sum(is.na(number)),
+            Min = min(number, na.rm = TRUE),
+            Q1 = round(quantile(number, 0.25, na.rm = TRUE)),
+            Median = round(quantile(number, 0.5, na.rm = TRUE)),
+            Q3 = round(quantile(number, 0.75, na.rm = TRUE)),
+            Max = round(max(number, na.rm = TRUE))) 
+ftab = flextable(stats) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# missing numbers for summary
+missing_q5c = select(stats, Missing, N) %>% mutate(qnum = '5c')
+```
+
+Many target sample sizes were small with a median target sample size of just 18.
+
+## Q5d: What was the actual sample size?
+
+This question was evaluated by the research assistant.
+We excluded papers where the sample size was not applicable (reviews, protocols, editorials, etc).
+
+```{r actual}
+#
+for_stats = select(sample_size_actual, -comment) %>%
+  full_join(type, by='doi') %>%
+  filter(!type %in% c('Protocol','Review'),
+         !str_detect(comment, 'infographic|editorial|opinion|position|consensus'))
+#
+stats = summarise(for_stats,
+            N = n(), 
+            Missing = sum(is.na(number)),
+            Min = min(number, na.rm = TRUE),
+            Q1 = round(quantile(number, 0.25, na.rm = TRUE)),
+            Median = round(quantile(number, 0.5, na.rm = TRUE)),
+            Q3 = round(quantile(number, 0.75, na.rm = TRUE)),
+            Max = round(max(number, na.rm = TRUE)))  
+ftab = flextable(stats) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# missing numbers for summary
+missing_q5d = select(stats, Missing, N) %>% mutate(qnum = '5d')
+```
+
+Many actual sample sizes were small with a median sample size of just 30.
+
+#### Sample size by study design
+
+The actual sample size can vary greatly by study design, hence we a boxplot to show the sample sizes by study type.
+
+```{r actual_by_type, fig.height=4}
+colours = c("cornsilk2", "aquamarine3", "dodgerblue")
+bplot = ggplot(data = for_stats, aes(x = factor(type), y = number, fill = factor(type)))+
+  geom_boxplot()+
+  scale_fill_manual(NULL, values = colours) + 
+  scale_y_log10()+
+  xlab(NULL)+
+  ylab('Actual sample size')+
+  coord_flip()+
+  g.theme +
+  theme(legend.position = 'none')
+bplot
+
+# version for paper
+for_paper = bind_rows(sample_size_target, sample_size_actual, .id = 'stype') %>%
+  full_join(type, by='doi') %>%
+  filter(!type %in% c('Protocol','Review'),
+         !str_detect(comment.y, 'infographic|editorial|opinion|position|consensus')) %>%
+  mutate(x = case_when(
+    type == 'Other' & stype == 1 ~ 1,
+    type == 'Other' & stype == 2 ~ 2,
+    type == 'Experimental study' & stype == 1 ~ 3,
+    type == 'Experimental study' & stype == 2 ~ 4,
+    type == 'Observational study' & stype == 1 ~ 5,
+    type == 'Observational study' & stype == 2 ~ 6
+  ))
+# axis labels with numbers
+xlabels = c("Other, target", "Other, actual", "Experimental study, target", "Experimental study, actual", "Observational study, target", "Observational study, actual")
+medians = group_by(for_paper, x) %>%
+  filter(!is.na(number)) %>%
+  summarise(median = round(median(number)))
+numbers = group_by(for_paper, x) %>%
+  filter(!is.na(number)) %>% # remove missing
+  tally() %>%
+  left_join(medians, by = 'x') %>%
+  mutate(label = xlabels,
+         label = paste0(label, '\n(n=', n, ', Median = ', median,')'))
+# colours with darker versions for target and actual
+colours = c("cornsilk1","cornsilk3", "aquamarine1", "aquamarine3", "dodgerblue1", "dodgerblue3")
+# plot
+b2plot = ggplot(data = for_paper, aes(x = factor(x), y = number, fill = factor(x)))+
+  geom_boxplot()+
+  scale_fill_manual(NULL, values = colours) + 
+  scale_x_discrete(labels = numbers$label)+
+  scale_y_log10(limits=c(1,NA))+
+  xlab(NULL)+
+  ylab('Sample size')+
+  geom_vline(xintercept=2.5, lty=2, col='grey77')+
+  geom_vline(xintercept=4.5, lty=2, col='grey77')+
+  coord_flip()+
+  g.theme +
+  theme(legend.position = 'none')
+#
+ggsave(plot = b2plot, filename = 'figures/8_sample_size.jpg', width = 5.8, height= 4.5, units = 'in', dpi=500)
+```
+
+Observational studies had generally larger sample size and had most of the very large studies.
+The studies with a sample size of one were case studies. 
+There were no experimental studies with a sample size over 100.
+
+## Q5c and Q5d: Comparing the target and actual sample size
+
+```{r actual_compare}
+sizes = full_join(sample_size_target, sample_size_actual, by='doi') %>%
+  rename('target' = 'number.x',
+         'actual' = 'number.y')
+# text
+text1 = data.frame(target = 20, actual = 1000, text = 'Better than\nexpected')
+text2 = data.frame(target = 100, actual = 10, text = 'Worse than\nexpected')
+#
+colours = c('darkorchid3','darkorange2')
+gplot = ggplot(data = sizes, aes(x=target, y=actual))+
+  geom_abline(intercept=0, slope=1, lty=2, col='darkseagreen3')+ # 
+  geom_point()+
+  geom_label(data = text1, aes(x=target, y=actual, label=text))+
+  geom_label(data = text2, aes(x=target, y=actual, label=text))+
+  scale_colour_manual(NULL, values = colours) + 
+  scale_x_log10()+
+  scale_y_log10()+
+  xlab('Target sample size')+
+  ylab('Actual sample size')+
+  geom_miss_point()+
+  g.theme+
+  theme(legend.position = "inside", 
+        legend.position.inside =  c(0.85, 0.85))
+gplot
+```
+
+The scatter plot compares the target and actual sample sizes. The studies that were missing a target sample size are shown using the purple dots on the left margin. 
+The plot includes a diagonal line of agreement. 
+We have used a log scale for both axes because of the strong positive skew in sample sizes with a few very large studies. 
+There were more studies that exceeded their sample size than were under.
+
+## Q6: How many participants were male and female? 
+
+This question was evaluated by the research assistant. All tables and graphs below exclude the papers where gender was not applicable, e.g., reviews.
+
+```{r gender_table}
+#
+for_stats = filter(gender, gender_not_applicable == FALSE) %>%
+  select(doi, female, male) %>%
+  filter(female + male > 0) %>% # only those studies where there was a gender breakdown
+  pivot_longer(-doi, values_to = 'number', names_to = 'gender') 
+#
+stats = group_by(for_stats, gender) %>%
+  summarise(N = n(), 
+            Missing = sum(is.na(number)),
+            Min = min(number, na.rm = TRUE),
+            Q1 = round(quantile(number, 0.25, na.rm = TRUE)),
+            Median = round(quantile(number, 0.5, na.rm = TRUE)),
+            Q3 = round(quantile(number, 0.75, na.rm = TRUE)),
+            Max = round(max(number, na.rm = TRUE)))  
+ftab = flextable(stats) %>%
+  theme_box() %>%
+  autofit()
+ftab
+```
+
+The table above shows the summary statistics on the number of males and females. We only show the statistics for those studies where information was given on the number of males and/or females.
+
+```{r gender_plot}
+# shading for 20% difference
+shading = data.frame(female = seq(1,501,100)) %>%
+  mutate(male = female,
+         lower = female*0.8,
+         upper = female*1.2)
+
+# Add more men more women labels
+text1 = data.frame(female = 100, male = 10, text = 'More\nfemales')
+text2 = data.frame(female = 10, male = 100, text = 'More\nmales')
+
+# arrows for no males and females?
+
+# plot
+for_plot = filter(gender, gender_not_applicable == FALSE, gender_not_reported  == FALSE)
+gplot = ggplot(data = for_plot, aes(x=female+1, y=male+1))+ # +1 to avoid zeros with log-transform
+  geom_abline(intercept=0, slope=1, lty=2, col='darkseagreen3')+ #
+  geom_ribbon(data = shading, aes(x=male, ymin=lower, ymax=upper), alpha=0.3, fill='skyblue')+
+  geom_point(col = 'dodgerblue')+
+  geom_label(data = text1, aes(x=female+1, y=male+1, label=text))+
+  geom_label(data = text2, aes(x=female+1, y=male+1, label=text))+
+  scale_x_log10(breaks=c(1,11,101,1001),labels=c(0,10,100,1000), expand=0.01)+ # reduce gap to axis
+  scale_y_log10(breaks=c(1,11,101,1001),labels=c(0,10,100,1000), expand=c(0.0005,0.05))+
+  xlab('Number of female participants')+
+  ylab('Number of male participants')+
+  g.theme
+gplot
+# export
+ggsave(plot = gplot, filename = 'figures/8_gender.jpg', width=5, height=5, units='in', dpi=500)
+# for text
+n_removed = filter(gender, gender_not_applicable == TRUE | gender_not_reported  == TRUE) %>% nrow()
+```
+
+The scatter plot above aims to show the gender balance in studies. 
+We removed `r n_removed` papers where gender was not applicable or not reported.
+The plot axes are on the log scale because of the positive skew in the numbers of males and females. 
+The dotted diagonal line indicates studies with equal numbers of men and women. The blue shaded area is a 20% difference in gender. 
+The dots along the x- and y-axes are for single sex studies (see next table). 
+
+### Number of single sex studies
+
+```{r single_sex}
+# remove not applicable and not reported
+N = filter(gender, gender_not_applicable  == FALSE, gender_not_reported == FALSE) %>% nrow()
+tab = filter(gender, gender_not_applicable  == FALSE, gender_not_reported == FALSE) %>%
+  group_by(female_only, male_only) %>%
+  tally() %>%
+  ungroup() %>%
+  mutate(percent = prop.table(n)) %>%
+  adorn_totals(where='row') %>%
+  mutate(Gender = case_when(
+    female_only == FALSE & male_only == FALSE ~ 'Both',
+    female_only == TRUE ~ 'Female only',
+    male_only == TRUE ~ 'Male only',
+    TRUE ~ 'Total'
+  )) %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  select(Gender, n, percent, lower, upper)
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+```
+
+Most studies were in both genders. There were slightly more studies in men only than women only.
+
+### Gender not reported
+
+```{r gender_not_reported}
+for_table = filter(gender, gender_not_applicable  == FALSE)
+N = filter(gender, gender_not_applicable  == FALSE) %>% nrow()
+# 
+tab = tabyl(for_table, gender_not_reported) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Not reported' = 'gender_not_reported') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q6x = filter(tab, `Not reported` == 'FALSE') %>%
+  mutate(qnum = 'q6', # using Q6 as a label, even though this does not exactly match the table 
+         qlabel  = 'Gender reported',
+         Number = N)
+```
+
+Some studies did not report the number of male and female participants.
+
+# Section 5: Good reporting
+
+## Q7: Was ethical clearance mentioned or was there a statement on why ethical clearance was not needed?  
+
+The data for this question was extracted using an automated search of the PDFs. 
+We removed studies where gender was not relevant (e.g., reviews) or not reported. 
+
+```{r ethics}
+for_table = full_join(auto_data, type, by='doi') %>%
+  filter(type != 'Review', doi!='999') # remove paper that was not in automated data
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, ethics) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Ethics statement' = 'ethics') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab 
+# numbers for summary diagram
+summary_q7 = filter(tab, `Ethics statement` == TRUE) %>%
+  mutate(qnum = 'q7',
+         qlabel  = 'Ethics statement',
+         Number = N)
+```
+
+Most studies included a statement regard ethics approval, which includes stating why ethical approval was not needed. 
+Some statements on ethical approval did not include the date or approval number, but both would ideally be included to provide the most transparency. 
+The ethics committees mentioned are shown in the appendix below. 
+
+## Q8. Were the data openly shared?
+
+The data for this question was extracted using an automated search of the PDFs. 
+The original question in the protocol was "Was there a data availability statement?"; however, we changed this to the more strict criterion of whether the data was openly shared. This is a stronger test of transparency. 
+
+```{r data}
+N = nrow(open_data_results)
+# 
+tab = tabyl(open_data_results, is_open_data) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Data statement' = 'is_open_data') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q8 = filter(tab, `Data statement` == TRUE) %>%
+  mutate(qnum = 'q8',
+         qlabel  = 'Openly available data',
+         Number = N)
+```
+
+Very few studies openly shared data. We manually checked the five papers that assessed to have open data and there was a stated use of a data despository for every paper. However, we did not download the data and check if the data matched those used in the paper. 
+
+If the data were stated by the authors to be 'available on request' then this was not clased as open data.
+
+<!--- "10.1111/sms.14125" on repository; "10.1167/iovs.61.6.3" deposited but not clear; 10.1371/journal.pone.0249122 on OSF; 10.3389/fphys.2021.758015 on OSF; 10.7717/peerj.8366 on OSF --->
+
+## Q9: Were there statements on funding and a conflict of interest? 
+
+The data for this question was extracted using an automated search of the PDFs.
+
+#### Conflicts of interest
+
+```{r conflict}
+N = nrow(auto_data)
+# 
+tab = tabyl(auto_data, conflict) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Conflict statement' = 'conflict') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q9a = filter(tab, `Conflict statement` == TRUE) %>%
+  mutate(qnum = 'q9a',
+         qlabel  = 'Conflict statement',
+         Number = N)
+```
+
+#### Funding
+
+```{r funding}
+N = nrow(auto_data)
+# 
+tab = tabyl(auto_data, funding) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Funding statement' = 'funding') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q9b = filter(tab, `Funding statement` == TRUE) %>%
+  mutate(qnum = 'q9b',
+         qlabel  = 'Funding statement',
+         Number = N)
+```
+
+The majority of papers did report on funding and conflicts of interest.
+
+## Q10: Were missing data discussed and/or correctly reported?
+
+This question was evaluated by the research assistant. We excluded papers where missing data were unlikely to be relevant, e.g. protocols and reviews. 
+
+```{r missing}
+#
+for_table = filter(missing, discussed != 'Not applicable')
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, discussed) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Discussed' = 'discussed') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q10 = filter(tab, `Discussed` == 'Yes') %>%
+  mutate(qnum = 'q10',
+         qlabel  = 'Missing data discussed',
+         Number = N)
+```
+
+Missing data were often not discussed. 
+
+## Q11: Were outliers removed without justification?
+
+This question was evaluated by the research assistant. We excluded papers where outliers were unlikely to be relevant, e.g. protocols and reviews. 
+
+```{r outliers}
+for_table = filter(outliers, outliers != 'Not applicable')
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, outliers) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Outliers' = 'outliers') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram, 
+summary_q11 = mutate(for_table, 
+                     frame = case_when( # make into simpler yes/no (so all frameworks are yes)
+                       outliers == 'Yes, no justification' ~ 'No',
+                       TRUE ~ 'Yes' # otherwise (all other categories are good)
+                     )) %>%
+  tabyl(frame) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  filter(frame == 'Yes') %>%
+  mutate(qnum = 'q11',
+         qlabel  = 'Outliers not removed or removed with justification',
+         Number = N)
+```
+
+Most papers did not remove outliers. When outliers were removed, there were seven papers that did this without justification. An example quote is "one athlete was removed from the final analysis as the subject was identified as an extreme outlier". This is not an adequate justification for exclusion as outliers can occur in real data and exclusions should only occur for data that is believed to be an error. 
+
+## Q12: Was a relevant EQUATOR reporting guideline mentioned?
+
+The data for this question was extracted using an automated search of the PDFs.
+
+```{r equator}
+N = nrow(auto_data)
+# 
+tab = tabyl(auto_data, equator) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Checklist' = 'equator') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q12 = filter(tab, `Checklist` == TRUE) %>%
+  mutate(qnum = 'q12',
+         qlabel  = 'EQUATOR checklist used',
+         Number = N)
+```
+
+Most studies did not mention using a reporting guideline.
+
+## Q13. Was the publication open access?
+
+The data for this question was extracted from _Unpaywall_.
+
+```{r OA}
+tab = group_by(auto_data, is_oa, oa_status) %>%
+  tally() %>%
+  ungroup() %>%
+  mutate(percent = round(prop.table(n)*100)) %>%
+  arrange(desc(is_oa), desc(n)) %>%
+  adorn_totals('row') %>%
+  rename('Is OA' = 'is_oa',
+         'OA status' = 'oa_status')
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  merge_v(j=1) %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q13 = tabyl(auto_data, is_oa) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  filter(is_oa == TRUE) %>%
+  mutate(qnum = 'q13',
+         qlabel  = 'Any open access version available',
+         Number = N)
+```
+
+Over half the papers were open access.
+
+# Section 6: Research question reflection
+
+## Q14a: Was the research question or study aim answered? (Did the authors reflect on the question)
+
+This question was evaluated by the research assistant. We excluded papers where this question was not relevant, e.g. protocols and editorials. 
+
+```{r reflect}
+for_table = filter(question_answered, answered != 'Not applicable')
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, answered) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Answered' = 'answered') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q14a = filter(tab, `Answered` == 'Yes') %>%
+  mutate(qnum = 'q14a',
+         qlabel  = 'Research question answered',
+         Number = N)
+```
+
+Almost every paper answered their question or aim.
+
+## Q14b: Was there some reflection about the practical significance of the main result/outcome?
+
+This question was evaluated by the research assistant. We excluded a small number of papers where this was not applicable, e.g., an infographic.
+
+```{r practical}
+for_table = filter(practical_significance, answered != 'Not applicable')
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, answered) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Answered' = 'answered') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q14b = filter(tab, `Answered` == 'Yes') %>%
+  mutate(qnum = 'q14b',
+         qlabel  = 'Reflection on practical significance',
+         Number = N)
+```
+
+Most papers gave some reflection on practical significance. 
+
+## Q14c: Was there an over-interpretation of the study results, for example, making causal claims from a small observational study ? 
+
+This question was evaluated by the two experts in the field. Not all papers were examined. 
+
+```{r interpretation}
+# waiting on data from david and Paolo
+for_table = filter(interpretation, !is.na(interpretation))
+N = nrow(for_table)
+# 
+tab = tabyl(for_table, interpretation) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  add_intervals(N = N) %>%
+  mutate(percent = round(percent*100),
+         lower = round(lower*100),
+         upper = round(upper*100)) %>%
+  rename('Interpretation' = 'interpretation') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# numbers for summary diagram
+summary_q14c = filter(tab, `Interpretation` == FALSE) %>%
+  mutate(qnum = 'q14c',
+         qlabel  = 'No over-interpretation of the study results',
+         Number = N)
+```
+
+Some papers were judged to have over-interpreted the study results. 
+
+# Summary diagram
+
+The diagram below summarises the questions in an attempt to show where authors are generally doing well and where improvements could be made. The plot is ordered with the best performing questions at the top. The results are coloured in two groups, those above 60% classed as relatively good (blue) and those under 40% classed as relatively bad (red).
+
+```{r summary, fig.width=8, fig.height=7}
+# combine summaries (means and CIs)
+for_plot_summary = bind_rows(#summary_q1c, # dropped
+                     summary_q2a, 
+                     #summary_q2c, # excluded after poor inter-rater agreement
+                     summary_q3,
+                     summary_q4a,
+                     summary_q4b,
+                     summary_q5a,
+                     summary_q5b,
+                     summary_q6x, # gender reported
+                     summary_q7,
+                     summary_q8,
+                     summary_q9a,
+                     summary_q9b,
+                     summary_q10,
+                     summary_q11,
+                     summary_q12,
+                     summary_q13,
+                     summary_q14a,
+                     summary_q14b,
+                     summary_q14c) %>% 
+  select(qnum, qlabel, n, Number, percent, lower, upper) %>%
+  arrange(percent) %>% # arrange questions by percent
+  mutate(x = 1:n(),
+         comb_label = paste(qnum, '. ', qlabel, sep=''),
+         comb_label = str_remove(comb_label, '^q'), # remove q at start
+         colour = case_when( # colour by percent
+           percent >= 60 ~ 1, # best
+           percent >= 40 ~ 2, # grey zone
+           percent < 40 ~ 3 # worse
+         ))
+colours = c('darkseagreen4','grey55','darkred') # high, medium, low
+colours = c('darkseagreen4','darkred') # high, low - no means in the medium
+# 
+n_plot = nrow(for_plot_summary)
+splot = ggplot(data = for_plot_summary, aes(x = x, y = percent, ymin = lower, ymax = upper, colour =  factor(colour))) +
+  geom_point()+
+  scale_color_manual(NULL, values = colours)+
+  scale_x_continuous(expand = 0.02, breaks = 1:n_plot, labels = for_plot_summary$comb_label)+
+  scale_y_continuous(limits=c(0,100))+
+  geom_errorbar(width=0, linewidth=1.05)+
+#  geom_text()+
+  g.theme+
+  theme(legend.position = 'none',
+        font = element_text(size = 16))+
+  xlab(NULL)+
+  ylab('Percent')+
+  coord_flip()
+splot
+# export
+ggsave(plot = splot, filename = 'figures/8_summary_diagram.jpg', width=5.5, height=6, units='in', dpi=500)
+```
+
+# Bibliographic data
+
+In this section we examine bibliographic data on the papers.
+
+## Word cloud of titles
+
+```{r wordcloud}
+# can't fix plot region
+min_count = 4 # minimum number of words for clouds
+source('8_wordcloud.R')
+# show cloud
+TeachingDemos::char2seed('wrexham')
+textplot_wordcloud(mydfm, max_words = 100, min_count = min_count, color = colors)
+```
+
+Words must have been mentioned `r min_count` times to be in the cloud. 
+
+## Most common topics (top 10)
+
+The topics were extracted from _OpenAlex_. Each article includes up to three topics. The table shows the number and percent.
+
+```{r common_topics}
+N = length(unique(topics$doi))
+tab = filter(topics, topics != '') %>%
+  group_by(topics) %>%
+  tally() %>%
+  arrange(desc(n))%>%
+  mutate(percent = round(100*n / N),
+         n = paste(n, ' (', percent, ')', sep='')) %>%
+  slice(1:10) %>%
+  select(-percent)
+names(tab)[1] = 'Topic'
+top_3_topics = slice(tab, 1:3) %>% # for summary table
+  rename('var' = 'Topic',
+         'stats' = 'n')
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+```
+
+## Most common journals (top 10)
+
+```{r common_journals}
+N = nrow(open_alex_data)
+tab = group_by(open_alex_data, journal) %>%
+  tally() %>%
+  arrange(desc(n))%>%
+  mutate(percent = round(100*n / N),
+         n = paste(n, ' (', percent, ')', sep='')) %>%
+  slice(1:10) %>%
+  select(-percent)
+names(tab)[1] = 'Journal'
+top_3_journals = slice(tab, 1:3) %>% # for summary table
+  rename('var' = 'Journal',
+         'stats' = 'n')
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+```
+
+## Most common publishers (top 10)
+
+```{r common_publishers}
+tab = filter(open_alex_data, publisher != '') %>%
+  group_by(publisher) %>%
+  tally() %>%
+  arrange(desc(n))%>%
+  slice(1:10)
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+```
+
+
+## Most common authors (top 10)
+
+```{r common_authors}
+tab = filter(author_frame, display_name != '') %>%
+  group_by(display_name) %>%
+  tally() %>%
+  arrange(desc(n)) %>%
+  slice(1:10)
+names(tab)[1] = "Author"
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# for text
+unique_authors = length(unique(author_frame$display_name))
+```
+
+There were `r unique_authors` unique authors.
+
+## Papers published in Frontiers or MDPI
+
+This uses data from _OpenAlex_.
+
+```{r frontiers}
+spub = c("Multidisciplinary Digital Publishing Institute","Frontiers Media")
+selected_publishers = filter(open_alex_data, publisher %in% spub) %>%
+  select(journal, title) %>%
+  arrange(journal, title)
+ftab = flextable(selected_publishers) %>%
+  theme_box() %>%
+  width(j=1, width=5, unit='cm') %>%
+  width(j=2, width=13, unit='cm') 
+ftab
+```
+
+There were `r nrow(selected_publishers)` papers published in _MDPI_ or _Frontiers_ journals.
+
+_MDPI_ and _Frontiers_ are considered as predatory publishers by [an independent group of researchers](https://www.predatoryjournals.org/the-list/publishers). Both publishers were clear outliers in [an analysis of publication patterns over time](https://arxiv.org/abs/2309.15884) with an enormous recent increase in output and special issues. They also have fast turn-around times, which raises concern about the rigor of their peer review.
+
+
+Summary statistics on the number of authors per paper.
+
+## Citations
+
+The citation data were from _OpenAlex_.
+
+#### Summary statistics for citation counts
+
+```{r cite_stats}
+# adjusted to per year
+citations = select(open_alex_data, doi, date, cited) %>%
+  mutate(time = as.numeric(as.Date('2025-08-21') - date), # citation search to publication date
+         yearly = cited / (time/365.25)) # citations per year
+#
+for_stats =  pivot_longer(citations, cols = c(cited, yearly))
+stats = group_by(for_stats, name) %>%
+  summarise(      N = n(), 
+                  Missing = sum(is.na(value)),
+                  Min = min(value),
+                  Q1 = round(quantile(value, 0.25)),
+                  Median = round(quantile(value, 0.5)),
+                  Q3 = round(quantile(value, 0.75)),
+                  Max = round(max(value))) %>%
+  ungroup() %>%
+  rename('Type' = 'name')
+ftab = flextable(stats) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# stats for big summary table
+citation_stats = mutate(stats, 
+    var = c('Total citations','Citations per year'), 
+    stats = paste(Median, ' [', Q1, ' to ', Q3, ']', sep='')) %>%
+  select(var, stats) 
+```
+
+Total citations counts and counts per year.
+
+#### Histogram of adjusted citation counts
+
+```{r citations}
+cplot = ggplot(data = citations, aes(yearly))+
+  geom_histogram(fill = 'darkseagreen2', col = 'grey77')+
+  xlab('Citations per year')+
+  ylab('Count')+
+  g.theme
+cplot
+```
+
+We look at the citations per year to adjust for time since publication (as papers published recently have less time to accrue citations). The distribution has a strong positive skew, with a few highly cited papers. 
+
+## Altmetric
+
+```{r altmetric}
+# from 5_get_altmetric.R
+#load('data/5_altmetric.RData') # should not need, should be in 7_combine_data
+#
+stats = summarise(altmetric, N = n(), 
+                  Missing = sum(is.na(altmetric_id)),
+                  Min = min(score),
+                  Q1 = round(quantile(score, 0.25)),
+                  Median = round(quantile(score, 0.5)),
+                  Q3 = round(quantile(score, 0.75)),
+                  Max = round(max(score)))
+ftab = flextable(stats) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# for text
+which_max = filter(altmetric, score >= stats$Max) 
+paper_max = left_join(which_max, papers, by='doi')
+# stats for big summary table
+altmetric_stats = mutate(stats, 
+    var = 'Altmetric', 
+    stats = paste(Median, ' [', Q1, ' to ', Q3, ']', sep='')) %>%
+  select(var, stats) 
+```
+
+Summary statistics on _Altmetric_ scores. The highest _Altmetric_ score was for the paper titled "`r paper_max$title`" published in _`r paper_max$journal`_.
+
+# Summary tables
+
+## Descriptive statistics
+
+```{r summary_table}
+# year, top three topics, top three journals
+big_table = bind_rows(year_stats,
+                      stats_ais_authors,
+                      citation_stats,
+                      altmetric_stats,
+                      stats_type,
+                      top_3_topics, 
+                      top_3_journals,
+                      .id = 'group') %>%
+  select(group, var, stats) %>%
+  mutate(group = case_when(
+    group == 1 ~ '',
+    group == 2 ~ '',
+    group == 3 ~ '',
+    group == 4 ~ '',
+    group == 5 ~ 'Study design',
+    group == 6 ~ 'Topics (top 3)',
+    group == 7 ~ 'Journals (top 3)',
+  )) %>%
+  filter(var != 'Total') # remove total row
+ftab = flextable(big_table) %>%
+  merge_v(j=1) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# export to latex
+library(xtable)
+print(xtable(big_table), include.rownames=FALSE, hline.after=FALSE, file = "reports/8_big_table.tex")
+```
+
+## Outcomes
+
+```{r, outcome_summary_table}
+for_table_summary = mutate(for_plot_summary, 
+                           numbers = paste0(n, '/', Number),
+                           ci = paste0(lower, ', ', upper)) %>%
+  select(comb_label, numbers, percent, ci)
+ftab = flextable(for_table_summary) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# export to latex
+print(xtable(for_table_summary, digits=0), include.rownames=FALSE, hline.after=FALSE, file = "reports/8_outcomes_table.tex")
+```
+
+## Missing data
+
+The table below reports the amount of missing data. We do not include conditional missing, for example, sample sizes were not relevant for systematic reviews.
+
+```{r, missing_data_summary}
+# year, top three topics, top three journals
+missing_table = bind_rows(missing_q5c,
+                      missing_q5d) %>%
+  mutate(percent = round(100*Missing/N)) %>%
+  select(qnum, Missing, N, percent)
+ftab = flextable(missing_table) %>%
+  theme_box() %>%
+  autofit()
+ftab
+# export to latex
+print(xtable(missing_table, digits=0), include.rownames=FALSE, hline.after=FALSE, file = "reports/8_missing_table.tex")
+```
+

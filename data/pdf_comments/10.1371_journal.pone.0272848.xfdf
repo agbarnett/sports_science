@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515120650+10'00'" flags="print" IT="HighlightNote" date="D:20250515120658+10'00'" name="ac241513-e292-4dac-ab09-260bacd46f1d" page="0" coords="482.173000,606.454000,491.442000,606.454000,482.173000,601.055000,491.442000,601.055000,428.541000,604.647000,482.186000,604.647000,428.541000,596.547000,482.186000,596.547000" rect="428.288000,596.294000,491.611000,606.623000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1b: 1 author, 3 of 3</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.000000,514.454000,796.000000,606.454000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515120734+10'00'" flags="print" IT="HighlightNote" date="D:20250515120746+10'00'" name="14e572af-974d-46ec-b6df-a97f9ab0aa96" page="0" coords="448.871000,658.580000,536.185000,658.580000,448.871000,642.381000,536.185000,642.381000,200.012000,636.073000,285.688000,636.073000,200.012000,619.874000,285.688000,619.874000" rect="199.506000,619.367000,536.691000,659.087000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1a: other,  case study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="612.129000,559.637000,796.055000,658.473000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515120829+10'00'" flags="print" IT="HighlightNote" date="D:20250515120833+10'00'" name="2079bd73-5bdc-47fa-9ca0-8a5ced940ab0" page="1" coords="211.974000,168.608000,568.386000,168.608000,211.974000,159.608000,568.386000,159.608000,200.012000,155.626000,364.987000,155.626000,200.012000,146.626000,364.987000,146.626000" rect="199.731000,146.345000,568.667000,168.889000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2a: no</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="yes" page="1" rect="612.129000,9.951890,796.055000,168.351000"
+/></highlight
+><text color="#9643FC" creationdate="D:20250515120838+10'00'" flags="print,nozoom,norotate" inreplyto="2079bd73-5bdc-47fa-9ca0-8a5ced940ab0" date="D:20250804101303+10'00'" name="38688bd1-53d1-456f-bfc8-011e1bfc7600" icon="Comment" page="1" rect="199.731000,144.889000,223.731000,168.889000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q2b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,76.888900,796.000000,168.889000"
+/></text
+><text color="#9643FC" creationdate="D:20250515120853+10'00'" flags="print,nozoom,norotate" inreplyto="2079bd73-5bdc-47fa-9ca0-8a5ced940ab0" date="D:20250515120853+10'00'" name="5deb8ff2-3d40-4f50-88fe-fc9c04572a2d" icon="Comment" page="1" rect="199.731000,144.889000,223.731000,168.889000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.000000,76.888900,796.000000,168.889000"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121121+10'00'" flags="print" IT="HighlightNote" date="D:20250515121209+10'00'" name="52d162ea-e47f-4a98-b310-f0b26226f80a" page="1" coords="547.820000,506.610000,570.910000,506.610000,547.820000,497.610000,570.910000,497.610000,200.012000,493.627000,564.445000,493.627000,200.012000,484.627000,564.445000,484.627000,200.012000,480.588000,569.984000,480.588000,200.012000,471.588000,569.984000,471.588000,200.012000,467.605000,391.166000,467.605000,200.012000,458.605000,391.166000,458.605000" rect="199.731000,458.324000,571.191000,506.891000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q3: previous research was mentioned on this topic. This articles is justified as previous research was flawed and more evidence was needed</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="612.129000,386.838000,796.055000,506.619000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121451+10'00'" flags="print" IT="HighlightNote" date="D:20250515121459+10'00'" name="7dd5e588-95e1-4a7f-bc1f-9c26319fd0ce" page="4" coords="211.974000,214.925000,566.235000,214.925000,211.974000,205.925000,566.235000,205.925000,200.012000,201.886000,567.195000,201.886000,200.012000,192.886000,567.195000,192.886000,200.012000,188.903000,566.720000,188.903000,200.012000,179.903000,566.720000,179.903000,200.012000,175.920000,388.299000,175.920000,200.012000,166.920000,388.299000,166.920000" rect="199.731000,166.639000,567.476000,215.206000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q11: outliers were removed with justification</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="4" rect="612.129000,117.428000,796.055000,214.955000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121251+10'00'" flags="print" IT="HighlightNote" date="D:20250515121301+10'00'" name="8deba56e-8376-442b-9fd0-f9a260ac820a" page="6" coords="217.529000,714.693000,241.015000,714.693000,217.529000,703.893000,241.015000,703.893000" rect="217.192000,703.556000,241.352000,715.030000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5a: no sample size calculation found</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="612.129000,465.121000,796.055000,714.502000"
+/></highlight
+><text color="#9643FC" creationdate="D:20250515121307+10'00'" flags="print,nozoom,norotate" inreplyto="8deba56e-8376-442b-9fd0-f9a260ac820a" date="D:20250515121307+10'00'" name="9c86c842-ec29-44a6-aeb9-869a66d30ada" icon="Comment" page="6" rect="217.192000,691.030000,241.192000,715.030000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="612.000000,623.030000,796.000000,715.030000"
+/></text
+><text color="#9643FC" creationdate="D:20250515121311+10'00'" flags="print,nozoom,norotate" inreplyto="8deba56e-8376-442b-9fd0-f9a260ac820a" date="D:20250515121311+10'00'" name="4520abbc-a07e-43ae-8b0c-3ee7a49120ff" icon="Comment" page="6" rect="217.192000,691.030000,241.192000,715.030000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="612.000000,623.030000,796.000000,715.030000"
+/></text
+><text color="#9643FC" creationdate="D:20250515121322+10'00'" flags="print,nozoom,norotate" inreplyto="8deba56e-8376-442b-9fd0-f9a260ac820a" date="D:20250515121345+10'00'" name="0262b7c8-a6ae-4aaa-b9ea-b23ebcd8396d" icon="Comment" page="6" rect="217.192000,691.030000,241.192000,715.030000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5d: 35 games</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="612.000000,623.030000,796.000000,715.030000"
+/></text
+><text color="#9643FC" creationdate="D:20250515121403+10'00'" flags="print,nozoom,norotate" inreplyto="8deba56e-8376-442b-9fd0-f9a260ac820a" date="D:20250515121403+10'00'" name="b2cc1875-e049-4151-b986-8496785394c5" icon="Comment" page="6" rect="217.192000,691.030000,241.192000,715.030000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q6: 0 male,, 35 female</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="612.000000,623.030000,796.000000,715.030000"
+/></text
+><text color="#9643FC" creationdate="D:20250515121421+10'00'" flags="print,nozoom,norotate" inreplyto="8deba56e-8376-442b-9fd0-f9a260ac820a" date="D:20250515121421+10'00'" name="7ae97dee-becd-4e37-b98a-f3a6125f5d1e" icon="Comment" page="6" rect="217.192000,691.030000,241.192000,715.030000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="612.000000,623.030000,796.000000,715.030000"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121516+10'00'" flags="print" IT="HighlightNote" date="D:20250515121527+10'00'" name="cd1654f3-592e-4785-b6cb-99ce4abaeaab" page="6" coords="243.608000,714.693000,271.049000,714.693000,243.608000,703.893000,271.049000,703.893000" rect="243.270000,703.556000,271.387000,715.030000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q10: no missing data were found</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="6" rect="612.000000,622.693000,796.000000,714.693000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121549+10'00'" flags="print" IT="HighlightNote" date="D:20250515121554+10'00'" name="e2cbb452-c0a8-462b-8e89-57c546c302f5" page="11" coords="217.529000,316.652000,274.497000,316.652000,217.529000,305.852000,274.497000,305.852000" rect="217.192000,305.515000,274.835000,316.989000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q14a: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="11" rect="612.129000,165.995000,796.055000,316.540000"
+/></highlight
+><text color="#9643FC" creationdate="D:20250515121627+10'00'" flags="print,nozoom,norotate" inreplyto="e2cbb452-c0a8-462b-8e89-57c546c302f5" date="D:20250515121627+10'00'" name="e553931d-3d97-4dda-af9c-4f7ce7709d27" icon="Comment" page="11" rect="217.192000,292.989000,241.192000,316.989000" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q14b: yes there was practical reflection on the results</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="11" rect="612.000000,224.989000,796.000000,316.989000"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121721+10'00'" flags="print" IT="HighlightNote" date="D:20250515121726+10'00'" name="ab9ea8ff-5508-4583-a63a-3aa4e42a3cc5" page="11" coords="200.012000,298.205000,565.514000,298.205000,200.012000,289.205000,565.514000,289.205000,200.012000,285.223000,567.592000,285.223000,200.012000,276.223000,567.592000,276.223000,200.012000,272.184000,562.867000,272.184000,200.012000,263.184000,562.867000,263.184000,200.012000,259.201000,571.774000,259.201000,200.012000,250.201000,571.774000,250.201000,200.012000,246.218000,564.969000,246.218000,200.012000,237.218000,564.969000,237.218000,200.012000,233.179000,569.845000,233.179000,200.012000,224.179000,569.845000,224.179000,200.012000,220.197000,562.214000,220.197000,200.012000,211.197000,562.214000,211.197000,200.012000,207.214000,574.281000,207.214000,200.012000,198.214000,574.281000,198.214000,200.012000,194.175000,575.601000,194.175000,200.012000,185.175000,575.601000,185.175000,200.012000,181.192000,566.757000,181.192000,200.012000,172.192000,566.757000,172.192000,200.012000,168.209000,534.669000,168.209000,200.012000,159.209000,534.669000,159.209000,200.012000,155.227000,568.773000,155.227000,200.012000,146.227000,568.773000,146.227000,200.012000,142.188000,572.974000,142.188000,200.012000,133.188000,572.974000,133.188000,200.012000,129.205000,571.643000,129.205000,200.012000,120.205000,571.643000,120.205000,200.012000,116.222000,572.922000,116.222000,200.012000,107.222000,572.922000,107.222000,200.012000,103.183000,564.266000,103.183000,200.012000,94.183100,564.266000,94.183100,200.012000,90.200900,550.937000,90.200900,200.012000,81.201100,550.937000,81.201100" rect="199.731000,80.919800,575.882000,298.486000" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q14c: </span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>Our DTW based framework enables analysis and interpretation of complex trajectories over&#xD;many games and teams, and the generation of key summary metrics of play outcomes. Comparison&#xD;of trajectory clusters within and between countries can assist in identifying key patterns&#xD;to support coaching and preparation for games. A key component of this is the ability to&#xD;highlight key plays for targeted video review from a large database of game footage, assisting&#xD;end users with limited time resources. A common methodology used in current and previous&#xD;research utilises Euclidean distances [</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#2B5BFA;font-weight:normal;font-style:normal"
+>3</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>–</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#2B5BFA;font-weight:normal;font-style:normal"
+>5</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>] which does not consider data alignment and will&#xD;miss out similar plays when analysed under unsupervised conditions. Existing works that used&#xD;DTW in basketball tended to focus on player movements, and did not explicitly relate trajectories&#xD;to play outcomes with a focus on both spatial and temporal characteristic of the trajectories&#xD;[</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#2B5BFA;font-weight:normal;font-style:normal"
+>15</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>,</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#2B5BFA;font-weight:normal;font-style:normal"
+>16</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>]. Our framework contributes a practical means to cluster spatio-temporal&#xD;trajectories and relate them to play outcomes, using ball movement data. However, the use of&#xD;k-means to cluster trajectory endpoints is limited in that it cannot take into account boundary&#xD;conditions associated with court boundaries. In addition, there is immense diversity in trajectories&#xD;and determining how many clusters to use is somewhat subjective; potentially, a combination&#xD;of using a vocabulary of discrete actions [</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#2B5BFA;font-weight:normal;font-style:normal"
+>16</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>] and a Diricihlet Process Mixture Model&#xD;[</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#2B5BFA;font-weight:normal;font-style:normal"
+>29</span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>] could better cluster trajectories and inherently finds the optimal number of clusters.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="11" rect="612.000000,206.205000,796.000000,298.205000"
+/></highlight
+></annots
+><f href="10.1371_journal.pone.0272848.pdf"
+/><ids original="FBAF31337C0030363EE62CEEFCFB61E9" modified="D81E4D8D92EA3942ACAE799FC0EF5B21"
+/></xfdf
+>

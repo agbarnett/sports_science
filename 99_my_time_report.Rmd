@@ -1,0 +1,53 @@
+---
+title: "Report on Adrian's time working on the AIS project"
+output: word_document
+date: "`r format(Sys.time(), '%d %B %Y')`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+library(dplyr)
+library(flextable)
+library(tidyr)
+library(ggplot2)
+library(readxl)
+library(stringr)
+
+# get the Excel data; tidy up some entries
+data = read_excel('../time_spent_AIS.xlsx', sheet=1, skip=1) %>%
+  mutate(Notes = str_replace(Notes, 'entry valid', 'entry, valid'),
+      Notes = ifelse(str_detect(tolower(Notes), 'protocol'), 'Protocol', Notes),
+      Notes = ifelse(str_detect(tolower(Notes), 'coding'), 'Programming', Notes),
+      Notes = ifelse(str_detect(Notes, '^Meeting'), 'Meetings', Notes))
+```
+
+# Cumulative plot over time
+
+```{r plot, fig.width=11, fig.height=6}
+total_hours = sum(data$Hours)
+colour = 'darkseagreen3'
+tplot = ggplot(data = data, aes(x = Date))+
+  stat_ecdf(aes(y = after_stat(y) * total_hours), geom = "step", size=1.05, col=colour) +
+  ylab('Cumulative hours')+
+  xlab('Date')+
+  theme_bw()+
+  theme(text = element_text(size=20))
+tplot
+```
+
+# Summary of tasks
+
+```{r table}
+tasks = group_by(data, Notes) %>%
+  summarise(n = n(),
+            Total = sum(Hours)) %>%
+  arrange(desc(Total)) %>%
+  mutate(Total = round(Total)) %>%
+  rename('Total hours' = 'Total')
+ftab = flextable(tasks) %>%
+  autofit() %>%
+  theme_box()
+ftab
+```
+
+The total amount of time spent was `r round(total_hours)` hours which is `r round(total_hours/7.25)` working days.

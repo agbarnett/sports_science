@@ -1,0 +1,91 @@
+---
+title: "Statistical Thinking report on published Australian Institute of Sport research from 2000 to 2024"
+output: word_document
+date: "`r format(Sys.time(), '%d %B %Y')`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+library(dplyr)
+library(flextable)
+library(tidyr)
+library(janitor)
+library(stringr)
+library(binom) # for intervals
+source('99_functions.R') # for CI function
+# plots:
+library(ggplot2)
+g.theme = theme_bw() + theme(panel.grid.minor = element_blank())
+library(naniar) # for missing plots
+
+# for search date
+load('data/1_pubmed_papers.RData')
+remove(data); pubmed_search_date = search_date
+
+# all data sources, from 7_combine_data.R
+load('data/7_analysis.RData') # 
+```
+
+# Appendix
+
+## Q7 (ethical clearance), part 2: What ethics committees were named
+
+The data for this question was extracted using an automated search of the PDFs.
+
+```{r named_committees, include=FALSE}
+# \w is any word of either case
+comm_pattern1 = c('(obtained |reviewed| approved |approval |granted )?(from |by )?(the )?( \\w+)?( \\w+)?( \\w+)?( \\w+)?( (h|H)uman)?( (R|r)esearch)? (e|E)thics (c|C)ommittee( approved)?( of| at)?( the)?( \\w+)?( \\w+)?( \\w+)?( \\w+)?')
+comm_pattern2 = c('(obtained |reviewed| approved |approval |granted )?(from |by )?(the )?( \\w+)?( \\w+)?( \\w+)?( \\w+)? (I|i)nstitutional (R|r)eview (B|b)oard( of| at)?( the)?( \\w+)?( \\w+)?( \\w+)?( \\w+)?')
+comm_patterns = paste(c(comm_pattern1, comm_pattern2), collapse='|')
+# extract text
+ethics_counts = filter(auto_data, ethics_text != '') %>%
+  mutate(name = str_remove_all(ethics_text, "-|,|;|'|\\(|\\)"), # remove brackets and apostrophes and other grammatical marks (not full-stops)
+         name = str_squish(name),
+         name = str_extract_all(name, pattern = comm_patterns), # used _all because of multiple mentions
+         name = tolower(name),
+         name = str_remove_all(name, 'and performed in|approved this study and all|which follows ethical guidelines|(were|was) conducted|all participants|was obtained prior to|which covered permission for|in the spirit of|(seek |sought )?consent from|informed consent|all athletes provided|(was )?obtained from|(was )?(granted|approved) by|(committee|approval|hrec|project) (id|number|no)'), # remove common words that are not needed
+         name = str_remove_all(name, '\\b[a-z]{1,4}[0-9]{1,9}\\b'), # remove HREC numbers
+         name = str_remove_all(name, ' [0-9]{1,9}\\b'), # remove HREC numbers
+         name = str_remove(name, '| [a-z][a-z]? $'), # unimportant words at end
+         name = str_replace_all(name, "universitys", "university's"), # add back apostrophe
+         name = str_replace_all(name, '\\bais\\b',' Australian Institute Of Sport '), # expand acronym
+         name = str_replace_all(name, '\\bnres\\b',' NRES '), # capitalise acronym
+         name = str_squish(name),
+         name = str_remove_all(name, '^the | the$'), # remove some common starts and ends
+         name = str_remove_all(name, '^from | from$'),
+         name = str_remove_all(name, '^and | and$'),
+         name = str_remove_all(name, '^by | by$'),
+         name = str_remove_all(name, '^to | to$'),
+         name = ifelse(str_detect(name, '^character'), '', name), # 
+         #name = str_remove(name, 'c\\(. '), # remove characters added due to multiple committees - not working
+         name = str_squish(name),
+         name = str_to_title(name)) %>% # back to title case
+  filter(name !='')
+```
+
+#### Where one committee was extracted
+
+```{r results='asis'}
+list_select = filter(ethics_counts, !str_detect(name, '\\"')) %>%
+  arrange(name)
+n_list = nrow(list_select)
+for (k in 1:n_list){
+  cat('• ', list_select$name[k], '\n\n', sep='')
+}
+```
+
+#### Where multiple committees were extracted
+
+```{r results='asis'}
+list_select = filter(ethics_counts, str_detect(name, '\\"')) %>%
+  arrange(name)
+n_list = nrow(list_select)
+for (k in 1:n_list){
+  cat('• ', list_select$name[k], '\n\n', sep='')
+}
+```
+
+<!--- this was https://www.tandfonline.com/doi/full/10.1080/21640629.2022.2142409 --->
+
+One article did not name the committee but instead accidentally published the following placeholder text: "The Human Research Ethics Committee of [Insert name of university, following review]".
+

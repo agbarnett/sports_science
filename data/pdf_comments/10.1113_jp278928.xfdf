@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121855+10'00'" flags="print" IT="HighlightNote" date="D:20250515121906+10'00'" name="097c4b40-19a1-4985-993d-7491731d9251" page="0" coords="101.956070,638.432129,139.425690,638.432129,101.956070,624.897827,139.425690,624.897827,53.667007,637.065125,99.323257,637.065125,53.667007,624.897827,99.323257,624.897827" rect="53.286774,624.474854,139.848648,638.855103" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1b: 1 author, 1 of 1</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="595.273987,546.432129,779.273987,638.432129"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515121914+10'00'" flags="print" IT="HighlightNote" date="D:20250515121918+10'00'" name="07e73528-1731-4781-b623-2800a654edb3" page="0" coords="53.667007,717.838623,160.531342,717.838623,53.667007,707.213501,160.531342,707.213501" rect="53.334961,706.881470,160.863388,718.170654" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1a: review</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="595.198669,620.177246,779.125549,717.704346"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515122031+10'00'" flags="print" IT="HighlightNote" date="D:20250515122223+10'00'" name="cf9a8d7d-8aaf-41c0-9964-4cf66ee250e0" page="1" coords="113.044571,429.513885,45.207001,429.513885,113.044571,442.108643,45.207001,442.108643" rect="44.813416,429.120300,113.438156,442.502228" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q2a: yes</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.198669,265.414398,779.125549,429.704987"
+/></highlight
+><text color="#9643FC" creationdate="D:20250515122040+10'00'" flags="print,nozoom,norotate" inreplyto="cf9a8d7d-8aaf-41c0-9964-4cf66ee250e0" date="D:20250515122234+10'00'" name="59ad4ef7-bd92-4852-84a0-7d63ff492e58" icon="Comment" page="1" rect="44.813416,418.502228,68.813416,442.502228" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q2b: 3 research questions</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.273987,350.502228,779.273987,442.502228"
+/></text
+><text color="#9643FC" creationdate="D:20250515122046+10'00'" flags="print,nozoom,norotate" inreplyto="cf9a8d7d-8aaf-41c0-9964-4cf66ee250e0" date="D:20250515122452+10'00'" name="6290182d-492f-4896-9297-fed4d43ef77c" icon="Comment" page="1" rect="44.813416,418.502228,68.813416,442.502228" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q2c: research question 1: PI&#xD;research question 2: PI&#xD;research question 3: PIE</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.273987,350.502228,779.273987,442.502228"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515122526+10'00'" flags="print" IT="HighlightNote" date="D:20250515122603+10'00'" name="88289849-372c-4887-8662-fdca04ff9b7b" page="2" coords="84.058533,444.482483,165.634171,444.482483,84.058533,433.373169,165.634171,433.373169" rect="83.711365,433.026001,165.981339,444.829651" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q3: yes there was previous research mentioned but not on this specific topic. This article is justified as more evidence is needed</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,352.482483,779.273987,444.482483"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515122656+10'00'" flags="print" IT="HighlightNote" date="D:20250515122702+10'00'" name="67b9c749-8d67-4987-b99c-719af0499de1" page="2" coords="53.667999,250.143860,114.123260,250.143860,53.667999,237.549103,114.123260,237.549103" rect="53.274414,237.155518,114.516846,250.537445" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q5a: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,158.143860,779.273987,250.143860"
+/></highlight
+><text color="#9643FC" creationdate="D:20250515122707+10'00'" flags="print,nozoom,norotate" inreplyto="67b9c749-8d67-4987-b99c-719af0499de1" date="D:20250515122707+10'00'" name="1cfc525a-faab-47fc-98ac-2282cee8248d" icon="Comment" page="2" rect="53.274414,226.537445,77.274414,250.537445" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,158.537445,779.273987,250.537445"
+/></text
+><text color="#9643FC" creationdate="D:20250515122711+10'00'" flags="print,nozoom,norotate" inreplyto="67b9c749-8d67-4987-b99c-719af0499de1" date="D:20250515122711+10'00'" name="34227dfd-9e0a-462b-bf1e-d8c0649f9e0b" icon="Comment" page="2" rect="53.274414,226.537445,77.274414,250.537445" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,158.537445,779.273987,250.537445"
+/></text
+><text color="#9643FC" creationdate="D:20250515122719+10'00'" flags="print,nozoom,norotate" inreplyto="67b9c749-8d67-4987-b99c-719af0499de1" date="D:20250515122719+10'00'" name="569a7d51-3fe6-46f2-8cb0-459493e93c16" icon="Comment" page="2" rect="53.274414,226.537445,77.274414,250.537445" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5d: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,158.537445,779.273987,250.537445"
+/></text
+><text color="#9643FC" creationdate="D:20250515122725+10'00'" flags="print,nozoom,norotate" inreplyto="67b9c749-8d67-4987-b99c-719af0499de1" date="D:20250515122725+10'00'" name="af25823b-70d7-466b-9d33-414d6d8da9a6" icon="Comment" page="2" rect="53.274414,226.537445,77.274414,250.537445" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q6: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,158.537445,779.273987,250.537445"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515122730+10'00'" flags="print" IT="HighlightNote" date="D:20250515122734+10'00'" name="ce4ecb1a-610c-4c66-b905-a908b9584963" page="2" coords="310.708679,460.856781,347.686462,460.856781,310.708679,448.262024,347.686462,448.262024" rect="310.315094,447.868439,348.080048,461.250366" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q10: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,368.856781,779.273987,460.856781"
+/></highlight
+><text color="#9643FC" creationdate="D:20250515122740+10'00'" flags="print,nozoom,norotate" inreplyto="ce4ecb1a-610c-4c66-b905-a908b9584963" date="D:20250515122740+10'00'" name="c60b1267-af73-4bd4-b6a9-ba2573881661" icon="Comment" page="2" rect="310.315094,437.250366,334.315094,461.250366" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q11: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="2" rect="595.273987,369.250366,779.273987,461.250366"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515122811+10'00'" flags="print" IT="HighlightNote" date="D:20250515122829+10'00'" name="4d064a50-346a-4d9d-85e3-3c874fdada13" page="10" coords="499.490265,325.779480,310.707184,325.779480,499.490265,336.888794,310.707184,336.888794,549.789307,337.731995,310.707184,337.731995,549.789307,348.841309,310.707184,348.841309,549.917664,349.692871,310.707184,349.692871,549.917664,360.802185,310.707184,360.802185,549.780884,361.644348,310.707184,361.644348,549.780884,372.753662,310.707184,372.753662,549.809448,373.595795,310.707184,373.595795,549.809448,384.705139,310.707184,384.705139" rect="310.360016,325.432312,550.264832,385.052307" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14b: yes there were practical reflections on the information of the articles</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="10" rect="595.273987,233.779480,779.273987,325.779480"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515123031+10'00'" flags="print" IT="HighlightNote" date="D:20250515123044+10'00'" name="96affb55-fb84-431f-b294-f446e236e0e5" page="17" coords="302.248718,584.893188,486.569000,584.893188,302.248718,572.298462,486.569000,572.298462,302.248718,571.941711,494.949860,571.941711,302.248718,559.346924,494.949860,559.346924" rect="301.855133,558.953369,495.343445,585.286743" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14a: yes each of the research aims were answered</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="17" rect="595.273987,492.893188,779.273987,584.893188"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250515123113+10'00'" flags="print" IT="HighlightNote" date="D:20250515123117+10'00'" name="d87f1f03-e517-43e3-8623-5421a48f7efd" page="21" coords="45.207001,446.476501,104.522278,446.476501,45.207001,433.881744,104.522278,433.881744" rect="44.813416,433.488159,104.915863,446.870087" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14c: The availability and capacity to use all muscle fuels&#xD;to support the specific demands of exercise (‘metabolic&#xD;flexibility’) is the Holy Grail for high-performance endurance&#xD;athletes, explaining continued fascination with&#xD;strategies to better utilise the body’s relatively unlimited&#xD;fat stores. There is robust evidence that adaptation to a&#xD;ketogenic LCHF creates substantial cellular changes to&#xD;increase themobilisation, transport, uptake and oxidation&#xD;of fat during exercise, even in elite athletes who specifically&#xD;train to optimise fat oxidative pathways. Furthermore,&#xD;although the time course of all changes in body function&#xD;with K-LCHF requires systematic investigation, maximal&#xD;changes tomuscle fatmetabolism occur within 3–4 weeks,&#xD;and probably 5–10 days of adaptation. Changes in, and the&#xD;significance of, muscle ketone use are, as yet, unknown.&#xD;Although there is clear evidence that keto-adaptation&#xD;reducesmuscle CHO oxidation, unresolved issues include&#xD;the ability of long-term ketoadaptation to restore muscle&#xD;glycogen content to levels normally associated with a&#xD;CHO-rich diet and the impairment of muscle’s ability to&#xD;use glycogen for oxidative fates. This is important since&#xD;CHO oxidation provides a more effective energy source&#xD;when the oxygen supply becomes limiting. Inability to&#xD;utilise available glycogen, albeit in reduced amounts with&#xD;medium-term adaptation to K-LCHF or at normalised&#xD;levels with strategies to restore/periodise CHO intake,&#xD;limits performance of higher intensity endurance exercise.&#xD;Furthermore, a wide variability in responsiveness to the&#xD;K-LCHF diet is well known, with extremes at both ends&#xD;of the performance spectrum being possible. Athletes who&#xD;are contemplating the use of ketogenic low-carbohydrate&#xD;high-fat diets should undertake an audit of their event&#xD;and their personal experiences to balance the risk of&#xD;impaired performance of higher intensity exercisewith the&#xD;potential benefits of replacing an unavoidable depletion&#xD;of carbohydrate stores with greater reliance on muscle&#xD;fat use.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="21" rect="595.273987,354.476501,779.273987,446.476501"
+/></highlight
+></annots
+><f href="10.1113_jp278928.pdf"
+/><ids original="7F78BAA6FC42D72C3DE34EFB23EB65A4" modified="97718654C136217CF6EB2A34C76D09A0"
+/></xfdf
+>

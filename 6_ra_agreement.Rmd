@@ -1,0 +1,348 @@
+---
+title: "Agreement in manually extracted data between the two research assistants"
+output: word_document
+date: "`r format(Sys.time(), '%d %B %Y')`"
+---
+
+The comparisons below are based on a random sample of 20 papers.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+source('99_functions.R')
+library(dplyr)
+library(flextable)
+library(xtable) # for latex
+library(tidyr)
+library(janitor)
+library(stringr)
+library(irrCAC) # for Gwet
+library(ggplot2)
+library(gridExtra)
+
+## from data from 5_read_pdf_comments_by_RA.R
+# Alex (before data edits)
+load('data/5_audit_pre_fix.RData')
+# rename
+atype = type
+aais_authors = ais_authors
+aquestion = question
+aquestion_number = question_number
+aframework = framework
+asample_size = sample_size
+asample_size_justified = sample_size_justified
+asample_size_actual = sample_size_actual
+asample_size_target = sample_size_target
+agender = gender
+amissing = missing
+aoutliers = outliers
+aquestion_answered = question_answered
+aprior = prior
+apractical_significance = practical_significance
+# Adrian
+load('data/5_audit_check2.RData')
+# Ran
+#load('data/5_audit_check.RData')
+```
+
+
+## Q1a: Study design
+
+```{r q1a}
+q1a = function_agree(atype, type, varname = 'type')
+q1a$table
+```
+
+Gwet's agreement statistic was `r round(q1a$agree$coeff.val*100)/100 ` with a confidence interval of `r q1a$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q1a$diffs
+```
+
+## Q1b: The number of authors with an AIS affiliation.
+
+```{r q1b}
+q1b = function_agree(aais_authors, ais_authors, varname = 'number')
+q1b$table
+```
+
+Gwet's agreement statistic was `r round(q1b$agree$coeff.val*100)/100` with a confidence interval of `r q1b$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q1b$diffs
+```
+
+
+## Q2a: Did the paper have a well-formed research question or study aim? 
+
+```{r q2a}
+# simplify for this agreement (see text below)
+aquestion = mutate(aquestion,
+                   question = ifelse(question == 'Purpose/Objective/Statement/Goal', 'Yes', question))
+
+#
+q2a = function_agree(aquestion, question, varname = 'question')
+q2a$table
+```
+
+For this question, the research assistant also split questions into whether they were a purpose, objective, etc; however, to simplify this comparison we just examine yes, no and not applicable.
+
+Gwet's agreement statistic was `r round(q2a$agree$coeff.val*100)/100` with a confidence interval of `r q2a$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q2a$diffs
+```
+
+## Q2b: How many research questions or aims were there? 
+
+For this comparison we compared any types of question. For example, if an RA said 2 aims and another said 2 questions then we assessed this as perfect agreement.
+
+```{r q2b}
+# combine any given numbers for three questions
+c1 = mutate_at(aquestion_number, vars(aims_n, question_n, purpose_n), tidyr::replace_na, 0) %>%
+  mutate(combine = aims_n + question_n + purpose_n) %>%
+  select(-question)
+c2 = mutate_at(question_number, vars(aims_n, question_n, purpose_n), tidyr::replace_na, 0) %>%
+  mutate(combine = aims_n + question_n + purpose_n) %>%
+  select(-question)
+#
+q2b = bland_altman(c1, c2, varname = 'combine')
+q2b$plot
+```
+
+The limits of agreement were `r round(q2b$loa$lower*100)/100` to `r round(q2b$loa$upper*100)/100` .
+
+
+## Q2c: Can the question(s) be expressed using an established framework? For example, PICO for clinical studies or SPIDER for qualitative studies.
+
+```{r q2c}
+q2c = function_agree(aframework, framework, varname = 'question')
+q2c$table
+```
+
+Gwet's agreement statistic was `r round(q2c$agree$coeff.val*100)/100` with a confidence interval of `r q2c$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q2c$diffs
+```
+
+## Q3: Was there previous research on the same question(s)?
+
+We did not use question 3 as I forgot to give the additional instructions to the second research assistant.
+
+```{r q3}
+#q3 = function_agree(aprior, prior, varname = 'prior')
+```
+
+#	Q5a: Was there a sample size calculation for the research question? 
+
+```{r q5a}
+q5a = function_agree(asample_size, sample_size, varname = 'any_sample_size')
+q5a$table
+```
+
+Gwet's agreement statistic was `r round(q5a$agree$coeff.val*100)/100` with a confidence interval of `r q5a$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q5a$diffs
+```
+
+## Q5b: Was the effect size justified in the sample size calculation? 
+
+Only where the answer to the previous question (Q5a) was "yes".
+
+```{r q5b}
+q5b = function_agree(asample_size_justified, sample_size_justified, varname = 'sample_size_justified')
+q5b$table
+```
+
+Gwet's agreement statistic was `r round(q5b$agree$coeff.val*100)/100` with a confidence interval of `r q5b$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q5b$diffs
+```
+
+## Q5c: What was the target sample size?
+
+Bland-Altman plot.
+
+```{r q5c}
+q5c = bland_altman(asample_size_target, sample_size_target, varname='number')
+q5c$plot
+```
+
+The limits of agreement were `r round(q5c$loa$lower*100)/100` to `r round(q5c$loa$upper*100)/100` .
+
+##### Differences between research assistants 
+
+```{r}
+q5c$diffs
+```
+
+
+## Q5d: What was the actual sample size?
+
+Bland-Altman plot with the x-axis on a log scale because of the one very large study.
+
+```{r q5d}
+q5d = bland_altman(asample_size_actual, sample_size_actual, varname='number')
+q5d$plot + scale_x_log10()
+```
+
+The limits of agreement were `r round(q5d$loa$lower*100)/100` to `r round(q5d$loa$upper*100)/100` .
+
+##### Differences between research assistants 
+
+```{r}
+q5d$diffs
+```
+
+## Q6: number of male and female participants
+
+Bland-Altman plots.
+
+```{r q6}
+q6m = bland_altman(agender, gender, varname='male')
+plotm = q6m$plot + scale_x_log10() + ggtitle("Male")
+q6f = bland_altman(agender, gender, varname='female')
+plotf = q6f$plot + scale_x_log10() + ggtitle("Female")
+# put plots together
+grid.arrange(plotm, plotf, ncol=2)
+```
+
+##### Differences between research assistants 
+
+```{r}
+q6m$diffs
+q6f$diffs
+# I calculated numbers from percentages
+```
+
+## Q10: Were missing data discussed and/or correctly reported?
+
+```{r q10}
+q10 = function_agree(amissing, missing, varname = 'discussed')
+q10$table
+```
+
+Gwet's agreement statistic was `r round(q10$agree$coeff.val*100)/100` with a confidence interval of `r q10$agree$coeff.ci`.
+
+
+##### Differences between research assistants 
+
+```{r}
+q10$diffs
+```
+
+## Q11: Were outliers removed without justification?
+
+```{r q11}
+q11 = function_agree(aoutliers, outliers, varname = 'outliers')
+q11$table
+```
+
+Gwet's agreement statistic was `r round(q11$agree$coeff.val*100)/100` with a confidence interval of `r q11$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q11$diffs
+```
+
+
+## Q14a: Was the research question answered? (Did the authors reflect on the question)
+
+```{r q14a}
+q14a = function_agree(aquestion_answered, question_answered, varname = 'answered')
+q14a$table
+```
+
+Gwet's agreement statistic was `r round(q14a$agree$coeff.val*100)/100` with a confidence interval of `r q14a$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q14a$diffs
+```
+
+
+## Q14b: Was there some reflection about the practical significance of the main result/outcome.
+
+```{r q14b}
+q14b = function_agree(apractical_significance, practical_significance, varname = 'answered')
+q14b$table
+```
+
+Gwet's agreement statistic was `r round(q14b$agree$coeff.val*100)/100` with a confidence interval of `r q14b$agree$coeff.ci`.
+
+##### Differences between research assistants 
+
+```{r}
+q14b$diffs
+```
+
+## Summary of all agreement statistics
+
+```{r, include=FALSE}
+# limits of agreement
+to_table_limits = bind_rows(q2b$loa, # 
+                     q5c$loa, 
+                     q5d$loa, .id = 'question')
+row.names(to_table_limits) = NULL
+qnums = c('2b','5c','5d')
+to_table_limits = mutate(to_table_limits, qnum = qnums) %>%
+  select('qnum','mean','lower','upper')  %>%
+  rename('question' = 'qnum')
+# Gwet's agreement
+to_table_gwet = bind_rows(q1a$agree,
+                     q1b$agree,
+                     q2a$agree,
+                     q2c$agree,
+                     q5a$agree,
+                     q5b$agree,
+                     q10$agree, 
+                     q11$agree,
+                     q14a$agree,
+                     q14b$agree, .id = 'question') 
+row.names(to_table_gwet) = NULL
+qnums = c('1a','1b','2a','2c','5a','5b','10','11','14a','14b')
+to_table_gwet = mutate(to_table_gwet, qnum = qnums) %>%
+  select('qnum','coeff.val','coeff.ci') %>%
+  rename('question' = 'qnum')
+```
+
+### Limits of agreement summary
+
+```{r table_loa}
+# table
+ftab = flextable(to_table_limits) %>%
+  colformat_double(j=3:4, digits=2) %>%
+  theme_box()
+ftab
+# export to latex
+print(xtable(to_table_limits), include.rownames=FALSE, hline.after=FALSE, file = "reports/6_limits_table.tex")
+```
+
+### Gwet's agreement summary
+
+```{r}
+# table
+ftab = flextable(to_table_gwet) %>%
+  colformat_double(j=2, digits=2) %>%
+  theme_box()
+ftab
+# export to latex
+print(xtable(to_table_gwet), include.rownames=FALSE, hline.after=FALSE, file = "reports/6_gwet_table.tex")
+```
+

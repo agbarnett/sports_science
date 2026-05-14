@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093033+10'00'" flags="print" IT="HighlightNote" date="D:20250630093039+10'00'" name="c8f563ee-d123-4900-aee9-05e9ffa4064f" page="0" coords="227.281616,558.558899,309.327759,558.558899,227.281616,545.580139,309.327759,545.580139" rect="226.876022,545.174561,309.733337,558.964478" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1b: 1 author, 3 of 6</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="595.276001,466.558899,779.276001,558.558899"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093041+10'00'" flags="print" IT="HighlightNote" date="D:20250630093045+10'00'" name="51d22c64-4cfe-4eab-811d-cffb6aea2dca" page="0" coords="136.904938,584.178711,257.481201,584.178711,136.904938,567.649475,257.481201,567.649475" rect="136.388397,567.132935,257.997742,584.695251" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1a: systematic review</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="595.276001,492.178711,779.276001,584.178711"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093056+10'00'" flags="print" IT="HighlightNote" date="D:20250630093106+10'00'" name="70995993-d83c-4155-909a-43c1a99a33cc" page="1" coords="212.366577,205.890320,293.562378,205.890320,212.366577,196.095032,293.562378,196.095032,42.520569,195.402313,293.598694,195.402313,42.520569,185.607025,293.598694,185.607025,42.520569,184.970917,293.547516,184.970917,42.520569,175.175629,293.547516,175.175629,42.520569,174.482941,293.559692,174.482941,42.520569,164.687653,293.559692,164.687653,42.520569,164.051544,293.580994,164.051544,42.520569,154.256256,293.580994,154.256256,42.520569,153.563538,255.932587,153.563538,42.520569,143.768250,255.932587,143.768250" rect="42.214462,143.462143,293.904785,206.196426" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q2a: yes there was a well formed aim</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,113.890320,779.276001,205.890320"
+/></highlight
+><text color="#9643FC" creationdate="D:20250630093120+10'00'" flags="print,nozoom,norotate" inreplyto="70995993-d83c-4155-909a-43c1a99a33cc" date="D:20250630093120+10'00'" name="8b1559f9-beac-4741-a98a-12edf069d217" icon="Comment" page="1" rect="42.214462,182.196426,66.214462,206.196426" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2b: 1 aim</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,114.196442,779.276001,206.196442"
+/></text
+><text color="#9643FC" creationdate="D:20250630093131+10'00'" flags="print,nozoom,norotate" inreplyto="70995993-d83c-4155-909a-43c1a99a33cc" date="D:20250630093131+10'00'" name="bea55c68-f6e6-4253-b6c0-65f68c49975e" icon="Comment" page="1" rect="42.214462,182.196426,66.214462,206.196426" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2c: PIDE</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,114.196442,779.276001,206.196442"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093144+10'00'" flags="print" IT="HighlightNote" date="D:20250630093147+10'00'" name="d669094d-c965-4ced-8f64-9925136959d0" page="1" coords="54.312271,132.723923,85.113602,132.723923,54.312271,122.848862,85.113602,122.848862" rect="54.003677,122.540268,85.422195,133.032516" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q5a: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,40.723923,779.276001,132.723923"
+/></highlight
+><text color="#9643FC" creationdate="D:20250630093205+10'00'" flags="print,nozoom,norotate" inreplyto="d669094d-c965-4ced-8f64-9925136959d0" date="D:20250630093205+10'00'" name="7ef4b4ed-2dcb-42e0-9854-d6a04224df03" icon="Comment" page="1" rect="54.003677,109.032516,78.003677,133.032516" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,41.032532,779.276001,133.032532"
+/></text
+><text color="#9643FC" creationdate="D:20250630093209+10'00'" flags="print,nozoom,norotate" inreplyto="d669094d-c965-4ced-8f64-9925136959d0" date="D:20250630093209+10'00'" name="a526fe71-a7d9-4614-bd80-c7cdfc1e0cd5" icon="Comment" page="1" rect="54.003677,109.032516,78.003677,133.032516" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,41.032532,779.276001,133.032532"
+/></text
+><text color="#9643FC" creationdate="D:20250630093212+10'00'" flags="print,nozoom,norotate" inreplyto="d669094d-c965-4ced-8f64-9925136959d0" date="D:20250630093212+10'00'" name="a4d6415b-a44d-410d-92b8-3c9edfab5bda" icon="Comment" page="1" rect="54.003677,109.032516,78.003677,133.032516" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5d: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,41.032532,779.276001,133.032532"
+/></text
+><text color="#9643FC" creationdate="D:20250630093217+10'00'" flags="print,nozoom,norotate" inreplyto="d669094d-c965-4ced-8f64-9925136959d0" date="D:20250630093217+10'00'" name="cd54d4c6-67b0-4f31-aecb-286ee1729e96" icon="Comment" page="1" rect="54.003677,109.032516,78.003677,133.032516" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q6: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,41.032532,779.276001,133.032532"
+/></text
+><text color="#9643FC" creationdate="D:20250630093223+10'00'" flags="print,nozoom,norotate" inreplyto="d669094d-c965-4ced-8f64-9925136959d0" date="D:20250630093229+10'00'" name="d3896c1a-f456-4eba-b0d4-03f633fef337" icon="Comment" page="1" rect="54.003677,109.032516,78.003677,133.032516" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q10: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,41.032532,779.276001,133.032532"
+/></text
+><text color="#9643FC" creationdate="D:20250630093232+10'00'" flags="print,nozoom,norotate" inreplyto="d669094d-c965-4ced-8f64-9925136959d0" date="D:20250630093232+10'00'" name="4f8cf5ca-6aec-4e8b-a391-68a7ec9ee397" icon="Comment" page="1" rect="54.003677,109.032516,78.003677,133.032516" subject="Sticky Note" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q11: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,41.032532,779.276001,133.032532"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093352+10'00'" flags="print" IT="HighlightNote" date="D:20250630093419+10'00'" name="e80d12b5-1ff6-4e92-81a7-4ea3d153a8e6" page="1" coords="136.403809,362.757355,293.596344,362.757355,136.403809,352.962067,293.596344,352.962067,42.520554,352.325958,293.559509,352.325958,42.520554,342.530670,293.559509,342.530670,42.520538,341.837982,293.549622,341.837982,42.520538,332.042694,293.549622,332.042694,42.520538,331.406586,182.518951,331.406586,42.520538,321.611298,182.518951,321.611298,198.482605,331.406586,293.560974,331.406586,198.482605,321.611298,293.560974,321.611298,187.314270,330.577759,193.696686,330.577759,187.314270,321.946106,193.696686,321.946106,42.520554,320.918610,102.484604,320.918610,42.520554,311.123322,102.484604,311.123322,114.406830,320.918610,293.565979,320.918610,114.406830,311.123322,293.565979,311.123322,105.222839,320.089783,111.605255,320.089783,105.222839,311.458130,111.605255,311.458130,42.520584,310.487213,108.568512,310.487213,42.520584,300.691925,108.568512,300.691925,119.226807,310.487213,293.558533,310.487213,119.226807,300.691925,293.558533,300.691925,110.722488,309.658386,117.104904,309.658386,110.722488,301.026733,117.104904,301.026733,42.521408,299.999237,221.952896,299.999237,42.521408,290.203949,221.952896,290.203949" rect="42.214432,289.897827,293.902466,363.063477" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q3: yes there was previous research on this topic. This article is justified as more research has been conducted and evidence is needed.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,270.757355,779.276001,362.757355"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093326+10'00'" flags="print" IT="HighlightNote" date="D:20250630093333+10'00'" name="eaeee12d-0cad-4336-97b0-eb9a47f35784" page="15" coords="328.233032,174.561737,367.298401,174.561737,328.233032,164.686676,367.298401,164.686676" rect="327.924438,164.378082,367.606995,174.870331" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14a: yes the aim of the study was answered</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="15" rect="595.276001,82.561737,779.276001,174.561737"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093250+10'00'" flags="print" IT="HighlightNote" date="D:20250630093258+10'00'" name="7f06e026-b6bd-4ddd-bab3-2d9987e83754" page="16" coords="49.038940,728.879761,283.905731,728.879761,49.038940,719.084473,283.905731,719.084473,32.825195,718.448364,283.881531,718.448364,32.825195,708.653076,283.881531,708.653076,32.825195,707.960388,283.894348,707.960388,32.825195,698.165100,283.894348,698.165100,32.825195,697.528992,87.757675,697.528992,32.825195,687.733704,87.757675,687.733704" rect="32.519089,687.427612,284.211853,729.185852" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14b: yes there were practical reflections on the outcomes of the study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="16" rect="595.276001,636.879761,779.276001,728.879761"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250630093304+10'00'" flags="print" IT="HighlightNote" date="D:20250630093321+10'00'" name="21703192-298f-4dee-8218-9cc448b0e9d3" page="16" coords="32.825195,728.879761,283.905731,728.879761,32.825195,719.084473,283.905731,719.084473,32.825195,718.448364,283.881531,718.448364,32.825195,708.653076,283.881531,708.653076,32.825195,707.960388,283.894348,707.960388,32.825195,698.165100,283.894348,698.165100,32.825195,697.528992,87.757675,697.528992,32.825195,687.733704,87.757675,687.733704" rect="32.519089,687.427612,284.211853,729.185852" subject="Comment on Text" title="alexd"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>14c: </span
+><span dir="ltr" style="font-size:-10.7pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>No key biomechanical variable associated with PT could be&#xD;replicated between studies. Knee flexion angle at IC and hip&#xD;extension rather than flexion strategy during a horizontal land of a&#xD;vertical stop-jump land were the only two variables associated&#xD;with asymptomatic PTA that could be replicated between-studies.&#xD;Key differences in jump-landing biomechanics may be conditional&#xD;to specific jump-landing tasks and/or observed cohorts.&#xD;Experimental task selection should include a horizontal landing as&#xD;isolated vertical landings and/or take-offs alone may not be sensitive&#xD;enough to identify key jump-landing variables associated with</span
+><span dir="ltr" style="font-size:-8.7pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+> </span
+><span dir="ltr" style="font-size:-10.7pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>PT. Clinicians should focus their assessment of jump-landing&#xD;technique in those with PT or at risk of developing PT on sagital&#xD;plane hip and knee kinematics, particularly during the horizontal&#xD;landing phase.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="16" rect="595.276001,636.879761,779.276001,728.879761"
+/></highlight
+></annots
+><f href="10.1016_j.ptsp.2020.03.011.pdf"
+/><ids original="6353A8D328A95FB246FA970293867311" modified="F0CCB68A6884944D8149769F90BC3DBA"
+/></xfdf
+>

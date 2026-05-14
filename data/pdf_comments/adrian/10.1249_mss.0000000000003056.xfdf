@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20251229174456+10'00'" flags="print" IT="HighlightNote" date="D:20251229174600+10'00'" name="b45e6d47-b771-4ced-8cfe-3741a67dbd72" page="0" coords="109.191000,585.851000,216.818000,585.851000,109.191000,575.061000,216.818000,575.061000" rect="108.853000,574.724000,217.155000,586.188000" subject="Comment on Text" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q1b: 1 author, 5 of 8</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="584.957000,493.851000,768.957000,585.851000"
+/></highlight
+><highlight color="#FF6200" opacity="0.399994" creationdate="D:20251229174629+10'00'" flags="print" date="D:20251229174745+10'00'" name="2f873959-2961-43d8-b5df-fe1215fa50ea" page="0" coords="301.834000,478.432000,328.146000,478.432000,301.834000,469.800000,328.146000,469.800000" rect="301.564000,469.531000,328.416000,478.702000" subject="Highlight" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q1a: review, says audit but is actually a review</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="485.672000,380.223000,669.380000,478.405000"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20260101185322+10'00'" flags="print" IT="HighlightNote" date="D:20260101185331+10'00'" name="65132979-3762-4eca-8449-ada2a5b26baa" page="1" coords="41.442500,339.071000,280.613000,339.071000,41.442500,328.281000,280.613000,328.281000,41.442500,327.109000,280.567000,327.109000,41.442500,316.319000,280.567000,316.319000,41.442500,315.203000,280.605000,315.203000,41.442500,304.414000,280.605000,304.414000,41.442500,303.241000,280.495000,303.241000,41.442500,292.452000,280.495000,292.452000,41.442500,291.279000,280.548000,291.279000,41.442500,280.490000,280.548000,280.490000,41.442500,279.317000,105.524000,279.317000,41.442500,268.528000,105.524000,268.528000" rect="41.105300,268.190000,280.950000,339.408000" subject="Comment on Text" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>q2a: yes</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,247.071000,768.957000,339.071000"
+/></highlight
+><text color="#9643FC" creationdate="D:20260101185354+10'00'" flags="print,nozoom,norotate" inreplyto="65132979-3762-4eca-8449-ada2a5b26baa" date="D:20260101185354+10'00'" name="ffd9e7a3-7342-412e-b480-1bb19664cf83" icon="Comment" page="1" rect="41.105300,315.408000,65.105300,339.408000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q2b: 2 questions</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,247.408000,768.957000,339.408000"
+/></text
+><text color="#9643FC" creationdate="D:20260102192219+10'00'" flags="print,nozoom,norotate" inreplyto="65132979-3762-4eca-8449-ada2a5b26baa" date="D:20260102192219+10'00'" name="f14b1fd3-e8ab-4dc0-bc3e-2e70f639c457" icon="Comment" page="1" rect="41.105300,315.408000,65.105300,339.408000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q3: not applicable, review</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,247.408000,768.957000,339.408000"
+/></text
+><highlight color="#FF6200" opacity="0.399994" creationdate="D:20260103134010+10'00'" flags="print" date="D:20260103134020+10'00'" name="860fccae-a99a-40de-81ff-30cff99ef31b" page="1" coords="314.418000,722.555000,387.814000,722.555000,314.418000,710.839000,387.814000,710.839000" rect="314.052000,710.473000,388.180000,722.921000" subject="Highlight" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>q5a: not applicable, review</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,630.555000,768.957000,722.555000"
+/></highlight
+><text color="#9643FC" creationdate="D:20260103134032+10'00'" flags="print,nozoom,norotate" inreplyto="860fccae-a99a-40de-81ff-30cff99ef31b" date="D:20260103134032+10'00'" name="0e289e58-9335-4928-a2c9-ac1202addf6d" icon="Comment" page="1" rect="314.052000,698.921000,338.052000,722.921000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q5b: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,630.921000,768.957000,722.921000"
+/></text
+><text color="#9643FC" creationdate="D:20260103134041+10'00'" flags="print,nozoom,norotate" inreplyto="860fccae-a99a-40de-81ff-30cff99ef31b" date="D:20260103134041+10'00'" name="a7d1517b-cb2f-4ee2-ba48-0433616f19b6" icon="Comment" page="1" rect="314.052000,698.921000,338.052000,722.921000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q5c: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,630.921000,768.957000,722.921000"
+/></text
+><text color="#9643FC" creationdate="D:20260103134050+10'00'" flags="print,nozoom,norotate" inreplyto="860fccae-a99a-40de-81ff-30cff99ef31b" date="D:20260103134050+10'00'" name="873b294f-5644-48aa-8c80-c80294a26c1e" icon="Comment" page="1" rect="314.052000,698.921000,338.052000,722.921000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q5d: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,630.921000,768.957000,722.921000"
+/></text
+><text color="#9643FC" creationdate="D:20260104111838+10'00'" flags="print,nozoom,norotate" inreplyto="860fccae-a99a-40de-81ff-30cff99ef31b" date="D:20260104111838+10'00'" name="26d26193-486f-4c83-ac38-2226a3a197ad" icon="Comment" page="1" rect="314.052000,698.921000,338.052000,722.921000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q6: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,630.921000,768.957000,722.921000"
+/></text
+><highlight color="#FF6200" opacity="0.399994" creationdate="D:20260105062703+10'00'" flags="print" date="D:20260105062714+10'00'" name="fc5d7f13-70fb-43f8-8bca-e95c4e71e9d6" page="1" coords="41.442500,254.274000,96.238800,254.274000,41.442500,241.387000,96.238800,241.387000" rect="41.039800,240.984000,96.641600,254.677000" subject="Highlight" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>q10: missing data were not mentioned</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,162.274000,768.957000,254.274000"
+/></highlight
+><text color="#9643FC" creationdate="D:20260107180150+10'00'" flags="print,nozoom,norotate" inreplyto="fc5d7f13-70fb-43f8-8bca-e95c4e71e9d6" date="D:20260107180150+10'00'" name="bd0673b1-c8b0-4cfd-bd36-d176b1371ebf" icon="Comment" page="1" rect="41.039800,230.677000,65.039800,254.677000" subject="Sticky Note" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;font-weight:normal;font-style:normal"
+>q11: not applicable</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.957000,162.677000,768.957000,254.677000"
+/></text
+><highlight color="#FF6200" opacity="0.399994" creationdate="D:20260129132239+10'00'" flags="print" date="D:20260129132401+10'00'" name="114d12aa-490f-4877-a83e-3c2e2665c6e0" page="1" coords="404.102570,649.912720,543.559204,649.912720,404.102570,639.123291,543.559204,639.123291,304.439575,637.950623,543.560059,637.950623,304.439575,627.161194,543.560059,627.161194,304.439575,625.988525,543.636719,625.988525,304.439575,615.199097,543.636719,615.199097,304.439575,614.026428,543.557739,614.026428,304.439575,603.237000,543.557739,603.237000" rect="304.102417,602.899841,543.973877,650.249878" subject="Highlight" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>q2c: PICO. </span
+><span dir="ltr" style="font-size:-13.9pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>P = males/females, I = fueling, C = CHO-based intervention, O = health outcome.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="584.956970,557.912720,768.956970,649.912720"
+/></highlight
+><highlight color="#FF6200" opacity="0.399994" creationdate="D:20260115144012+10'00'" flags="print" date="D:20260115144017+10'00'" name="4a94b2e8-baea-4390-a5d1-d488accf3d74" page="4" coords="417.880000,398.877000,543.584000,398.877000,417.880000,388.088000,543.584000,388.088000,304.441000,386.915000,543.571000,386.915000,304.441000,376.126000,543.571000,376.126000,304.441000,374.953000,543.594000,374.953000,304.441000,364.164000,543.594000,364.164000,304.441000,362.991000,543.621000,362.991000,304.441000,352.201000,543.621000,352.201000,304.441000,351.029000,444.023000,351.029000,304.441000,340.239000,444.023000,340.239000" rect="304.103000,339.902000,543.958000,399.214000" subject="Highlight" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>q14a: yes</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="4" rect="584.957000,306.877000,768.957000,398.877000"
+/></highlight
+><highlight color="#FF6200" opacity="0.399994" creationdate="D:20260115144347+10'00'" flags="print" date="D:20260115144401+10'00'" name="667cc57e-952a-42c3-a717-f5d764ba12df" page="10" coords="462.262000,745.555000,543.570000,745.555000,462.262000,734.765000,543.570000,734.765000,304.441000,733.592000,543.560000,733.592000,304.441000,722.803000,543.560000,722.803000,304.441000,721.630000,543.528000,721.630000,304.441000,710.841000,543.528000,710.841000,304.441000,709.668000,376.085000,709.668000,304.441000,698.879000,376.085000,698.879000" rect="304.103000,698.542000,543.907000,745.892000" subject="Highlight" title="Adrian Barnett"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>q14b: yes. although fairly brief</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="10" rect="584.957000,653.555000,768.957000,745.555000"
+/></highlight
+></annots
+><f href="../../pdfs/Adrian/10.1249_mss.0000000000003056.pdf"
+/><ids original="D438F63EF5F441E86AFE23AFB023814A" modified="1809DF8C1D458E49932FF2E9EBB0D5F9"
+/></xfdf
+>

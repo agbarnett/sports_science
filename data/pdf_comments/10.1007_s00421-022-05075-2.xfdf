@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><annots
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709130848+10'00'" flags="print" IT="HighlightNote" date="D:20250709130906+10'00'" name="f25fa244-fb71-461c-847e-89eed2a46b60" page="0" coords="87.392609,599.296021,134.322006,599.296021,87.392609,585.992126,134.322006,585.992126,51.023605,598.211975,85.322601,598.211975,51.023605,585.992126,85.322601,585.992126" rect="50.641724,585.576355,134.737762,599.711792" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1b: 5 authors, 1, 2, 5, 6, 7 of 8</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="595.276001,507.296021,779.276001,599.296021"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709130912+10'00'" flags="print" IT="HighlightNote" date="D:20250709130915+10'00'" name="3ff329ca-8e73-4bf5-afd7-bd86c1441b27" page="0" coords="296.283997,650.458862,445.258240,650.458862,296.283997,632.283081,445.258240,632.283081,51.023605,632.458862,163.087463,632.458862,51.023605,614.283081,163.087463,614.283081" rect="50.455612,613.715088,445.826233,651.026855" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q1a: experimental study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="0" rect="595.276001,558.458862,779.276001,650.458862"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709130923+10'00'" flags="print" IT="HighlightNote" date="D:20250709130929+10'00'" name="2e6541dc-5310-452e-acbf-0d4883a80427" page="1" coords="334.963776,423.340179,544.253723,423.340179,334.963776,408.250305,544.253723,408.250305,306.143616,410.840179,544.108887,410.840179,306.143616,395.750305,544.108887,395.750305,306.143616,398.340179,544.253479,398.340179,306.143616,383.250305,544.253479,383.250305,306.143616,385.840179,544.288757,385.840179,306.143616,370.750305,544.288757,370.750305,306.143616,373.340179,544.253540,373.340179,306.143616,358.250305,544.253540,358.250305,306.143585,360.840179,544.253540,360.840179,306.143585,345.750305,544.253540,345.750305,306.143585,348.340179,415.613739,348.340179,306.143585,333.250305,415.613739,333.250305" rect="305.672028,332.778748,544.760315,423.811737" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q2a: yes there was a well formed aim</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,331.340179,779.276001,423.340179"
+/></highlight
+><text color="#9643FC" creationdate="D:20250709130932+10'00'" flags="print,nozoom,norotate" inreplyto="2e6541dc-5310-452e-acbf-0d4883a80427" date="D:20250709130932+10'00'" name="dfd3b721-809b-4105-8564-4d53816742d3" icon="Comment" page="1" rect="305.672028,399.811737,329.672028,423.811737" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2b: 1 aim</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,331.811737,779.276001,423.811737"
+/></text
+><text color="#9643FC" creationdate="D:20250709130955+10'00'" flags="print,nozoom,norotate" inreplyto="2e6541dc-5310-452e-acbf-0d4883a80427" date="D:20250709130955+10'00'" name="a2fdbb35-7bf5-49c2-89a3-54e8cd7e1337" icon="Comment" page="1" rect="305.672028,399.811737,329.672028,423.811737" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q2c: PICO</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,331.811737,779.276001,423.811737"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709131021+10'00'" flags="print" IT="HighlightNote" date="D:20250709131031+10'00'" name="e66f109e-6fcf-4c5a-9ebd-6bd22b100e8a" page="1" coords="503.487823,198.340149,544.276733,198.340149,503.487823,183.250275,544.276733,183.250275,306.141693,185.840149,418.329803,185.840149,306.141693,170.750275,418.329803,170.750275,421.389709,185.840149,424.169708,185.840149,421.389709,172.560272,424.169708,172.560272,425.751709,185.840149,544.161621,185.840149,425.751709,170.750275,544.161621,170.750275,306.141724,173.340149,530.828918,173.340149,306.141724,158.250275,530.828918,158.250275" rect="305.670135,157.778717,544.748291,198.811707" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q5a: yes there was a sample size calculation</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,106.340149,779.276001,198.340149"
+/></highlight
+><text color="#9643FC" creationdate="D:20250709131049+10'00'" flags="print,nozoom,norotate" inreplyto="e66f109e-6fcf-4c5a-9ebd-6bd22b100e8a" date="D:20250709131049+10'00'" name="a67417ed-ddf4-4617-a321-6f4f4a8e1f86" icon="Comment" page="1" rect="305.670135,174.811707,329.670135,198.811707" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5b: there was no clear justification for the effect size</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,106.811707,779.276001,198.811707"
+/></text
+><text color="#9643FC" creationdate="D:20250709131058+10'00'" flags="print,nozoom,norotate" inreplyto="e66f109e-6fcf-4c5a-9ebd-6bd22b100e8a" date="D:20250709131058+10'00'" name="9c456541-1880-47b0-82fc-90eaace4ec55" icon="Comment" page="1" rect="305.670135,174.811707,329.670135,198.811707" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5c: 24</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,106.811707,779.276001,198.811707"
+/></text
+><text color="#9643FC" creationdate="D:20250709131105+10'00'" flags="print,nozoom,norotate" inreplyto="e66f109e-6fcf-4c5a-9ebd-6bd22b100e8a" date="D:20250709131105+10'00'" name="8d01aaaf-39be-45b2-9c5c-54c206a8775a" icon="Comment" page="1" rect="305.670135,174.811707,329.670135,198.811707" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q5d: 31</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,106.811707,779.276001,198.811707"
+/></text
+><text color="#9643FC" creationdate="D:20250709131114+10'00'" flags="print,nozoom,norotate" inreplyto="e66f109e-6fcf-4c5a-9ebd-6bd22b100e8a" date="D:20250709131114+10'00'" name="8e459c10-593d-449b-b409-7db662c1abab" icon="Comment" page="1" rect="305.670135,174.811707,329.670135,198.811707" subject="Sticky Note" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;font-weight:normal;font-style:normal"
+>Q6: 31 male, 0 female</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,106.811707,779.276001,198.811707"
+/></text
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709131521+10'00'" flags="print" IT="HighlightNote" date="D:20250709131542+10'00'" name="c5904673-b452-4a97-9aec-56739424c41e" page="1" coords="317.483612,473.340179,544.393677,473.340179,317.483612,458.250305,544.393677,458.250305,306.143616,460.840179,544.311523,460.840179,306.143616,445.750305,544.311523,445.750305,306.143616,448.340179,544.285278,448.340179,306.143616,433.250305,544.285278,433.250305,306.143616,435.840179,483.140625,435.840179,306.143616,420.750305,483.140625,420.750305" rect="305.672058,420.278748,544.865234,473.811737" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q3: there was no previous research on this topic. This article is well justified that there is need for more evidence.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="1" rect="595.276001,381.340179,779.276001,473.340179"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709131130+10'00'" flags="print" IT="HighlightNote" date="D:20250709131136+10'00'" name="9a7bd865-406b-405d-8b6a-29930afa87ca" page="3" coords="436.968536,286.019165,544.420532,286.019165,436.968536,270.929291,544.420532,270.929291,306.121674,273.519165,544.207886,273.519165,306.121674,258.429291,544.207886,258.429291,306.121674,261.019165,501.199982,261.019165,306.121674,245.929291,501.199982,245.929291" rect="305.650116,245.457733,544.892090,286.490723" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q10: missing data was well reported</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="3" rect="595.276001,194.019165,779.276001,286.019165"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709131159+10'00'" flags="print" IT="HighlightNote" date="D:20250709131230+10'00'" name="bef4dcfb-2728-4703-a24e-2c49a8f27376" page="4" coords="51.023605,136.606155,289.171417,136.606155,51.023605,121.516281,289.171417,121.516281,51.023590,124.106155,289.163513,124.106155,51.023590,109.016281,289.163513,109.016281,51.023590,111.606155,245.975372,111.606155,51.023590,96.516281,245.975372,96.516281" rect="50.552032,96.044724,289.642975,137.077713" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q11: outliers were removed with justification</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="4" rect="595.276001,44.606155,779.276001,136.606155"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709131245+10'00'" flags="print" IT="HighlightNote" date="D:20250709131253+10'00'" name="4ea45494-2a2d-4f48-892b-f27bb9e9f5d8" page="5" coords="306.141693,149.276184,363.105835,149.276184,306.141693,134.408203,363.105835,134.408203" rect="305.677063,133.943573,363.570465,149.740814" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14a: yes the aim of the study was answered</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="5" rect="595.276001,57.276184,779.276001,149.276184"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709131443+10'00'" flags="print" IT="HighlightNote" date="D:20250709131455+10'00'" name="685ad1e8-950e-4717-9d0e-33e149e53ece" page="7" coords="51.023605,175.858185,165.298676,175.858185,51.023605,160.990204,165.298676,160.990204" rect="50.558975,160.525574,165.763306,176.322815" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14b: yes there were practical reflections on the outcomes of the study</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="7" rect="595.276001,83.858185,779.276001,175.858185"
+/></highlight
+><highlight color="#9643FC" opacity="0.399994" creationdate="D:20250709131504+10'00'" flags="print" IT="HighlightNote" date="D:20250709131507+10'00'" name="ce934b76-06ec-493f-8404-cf6f4058d7a6" page="7" coords="51.023605,149.220154,288.909790,149.220154,51.023605,134.130280,288.909790,134.130280,51.023605,136.720154,289.223602,136.720154,51.023605,121.630280,289.223602,121.630280,51.023605,124.220154,289.250671,124.220154,51.023605,109.130280,289.250671,109.130280,51.023605,111.720154,289.132416,111.720154,51.023605,96.630280,289.132416,96.630280,51.023605,99.220154,289.280426,99.220154,51.023605,84.130280,289.280426,84.130280,51.023605,86.720154,91.373795,86.720154,51.023605,71.630280,91.373795,71.630280" rect="50.552048,71.158722,289.751984,149.691711" subject="Comment on Text" title="Alexander Gibson"
+><contents-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:25.1.0" xfa:spec="2.0.2"
+><p dir="ltr"
+><span dir="ltr" style="font-size:-14.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Q14c: </span
+><span dir="ltr" style="font-size:-13.3pt;text-align:left;color:#000000;font-weight:normal;font-style:normal"
+>Whole-body water immersion strategies as utilised in this&#xD;study can be prescribed post-resistance exercise for highly&#xD;trained athletes during an in-season competition phase,&#xD;posing little risk of attenuating muscular hypertrophy; with&#xD;the potential to accrue trivial increases in concentric-only&#xD;SJ height.</span
+></p
+></body
+></contents-richtext
+><popup flags="print,nozoom,norotate" open="no" page="7" rect="595.276001,57.220154,779.276001,149.220154"
+/></highlight
+></annots
+><f href="10.1007_s00421-022-05075-2.pdf"
+/><ids original="E97F03611F7E584B85AB5AD92C1E4D24" modified="66FE51DAD0D11740B7A56BA001BD93CE"
+/></xfdf
+>

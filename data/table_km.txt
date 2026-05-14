@@ -1,0 +1,12 @@
+| Microcycle | Position | Total Distance |
+|:-----------|:---------|:---------------|
+| M1 | Central defender | 22.5 |
+| M1 | Fullback | 22.5 |
+| M1 | Central midfielder | 23.6 |
+| M1 | Forwards | 19.1 |
+| M2 | Central defender | 24.1 |
+| M2 | Fullback | 23.7 |
+| M2 | Central midfielder | 22.5 |
+| M2 | Forwards | 28.2 |
+| M3 | Central defender | 21.8 |
+| M3 | Fullback | 19.5 |
