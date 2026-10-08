@@ -115,6 +115,8 @@ setdiff(xmls_to_check, pdfs) # should be empty
 library(diagram)
 attach(flow_numbers) # from 2_compare_combine_databases.R
 n_final = nrow(papers) # update final numbers
+n_exclude_edit = 7 # late exclusions, see 7_combine_data.R
+n_final = n_final - n_exclude_edit
 l1 = paste0('PubMed = ', n_pubmed)
 l2 = paste0('Scopus = ', n_scopus)
 l3 = paste0('AIS information\nofficer = ', n_library)
@@ -125,7 +127,9 @@ l5 = paste0(
   '\nNo AIS affiliation = ',
   n_exclude,
   '\nAfter manual checking = ',
-  n_exclude_manual
+  n_exclude_manual,
+  '\nEditorial/opinion = ',
+  n_exclude_edit
 )
 l6 = paste0('Final sample = ', n_final)
 null = '' # for arrow placements
@@ -143,7 +147,7 @@ i	x	y	box.col	box.type	box.prop	box.size
 2	0.5	0.94	white	square	0.35	0.14
 3	0.8	0.94	white	square	0.35	0.14
 4	0.25	0.5	white	square	0.35	0.14
-5	0.75	0.25	white	square	0.35	0.24
+5	0.75	0.25	white	square	0.55	0.23
 6	0.25	0.06	white	square	0.35	0.15
 7	0.25	0.25	transparent	square	0	0'
 )

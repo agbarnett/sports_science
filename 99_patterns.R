@@ -52,26 +52,31 @@ ethical_words = c(
   'institution(al)? review boards?',
   'research ethics boards?',
   'human (research )?ethic(s|al) committees?',
+  'research ethics commitees?.? approval', # added on Sep 2026
   'independent ethic(s|al) committees?',
   'code of ethics of the (world medical association|wma)',
   '(world medical association|wma) (international )?code of medical ethics',
-  'research ethic(s|al) committees?'
+  '(local|research) ethic(s|al) committees?', # added `local` on sep 2026
+  'approv(ed|al) by the \\b\\w+\\b ethic' # added sep 2026
 )
 ethical_pattern = paste(ethical_words, collapse = '|')
 
 ## funding, add 'australian sports foundation'?
 funding_words = c(
-  '(had|received) no (external|research|study )?funding',
+  '(had|received) no (external|research|study|specific )?funding', # added specific 2026-09-15
   'funding (statement|declaration|information)',
   '^funding:',
+  '^funding$', # added to capture heading on Sep 2026
   '(was|is) (supported|funded) (in part )?by (a )?grants?',
   'authors acknowledge the (ongoing )?support of',
-  '(project|research|study) (was|is) funded by',
+  '(project|research|study) (was|is) (funded|awarded) (by|via)', # added Sep 2026
   'grant numbers?',
+  'no funding source', # added Sep 2026
+  'no source of funding', # added Sep 2026
   'industry.(co.)?fund(ed|ing)',
-  '\\b(was|is) (generously )?supported by\\b',
+  # '\\b(was|is) (generously )?supported by\\b', # false positives with discussion section talking about ideas support (Sep 2026)
   '^funding$', # for section heading
-  '(co.)?funding (for this (research|study|work) )?was received (for this (research|study|work) )?',
+  '(co.)?funding (for this (research|study|work) )?was (received|awarded) (for this (research|study|work) )?',
   '(co.)?funded by (the )?(commonwealth|australian?|national)',
   'the authors have (not )?declared (a )?specific (funding|grants?)',
   'this (research|study|work) was (supported|(co.)?funded) by',
@@ -91,6 +96,7 @@ conflict_words = c(
   'competing interests?',
   '^conflicts$', # for section heading
   'disclosure statements?',
+  'conflict of interest statement', #
   'nor did they have a role in the (design|analysis|reporting)',
   'no role in the (design|analysis|reporting)',
   '(financial|perceived) conflicts? of interest',
@@ -123,10 +129,12 @@ plan_pattern = paste(plan, collapse = '|')
 registration = c(
   '\\bpre.?registration\\b',
   'registered.report',
+  '\\bprospero\\b', # added Sep 2026
   'aspredicted', # must be one word, otherwise is confused with phrase
   '\\banzctr\\b',
   'clinicaltrials\\.gov',
-  'australian? new zealand (clinical )?trials regist(ry|ration)'
+  'australian? new zealand (clinical )?trials regist(ry|ration)',
+  'a protocol was (developed and )?registered' # added sep 2026
 )
 registration_pattern = paste(registration, collapse = '|')
 

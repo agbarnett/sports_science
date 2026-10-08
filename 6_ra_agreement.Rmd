@@ -340,7 +340,8 @@ print(xtable(to_table_limits), include.rownames=FALSE, hline.after=FALSE, file =
 # table
 ftab = flextable(to_table_gwet) %>%
   colformat_double(j=2, digits=2) %>%
-  theme_box()
+  theme_box() %>%
+  autofit()
 ftab
 # export to latex
 print(xtable(to_table_gwet), include.rownames=FALSE, hline.after=FALSE, file = "reports/6_gwet_table.tex")

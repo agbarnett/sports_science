@@ -1,0 +1,253 @@
+---
+title: "Verifying the accuracy of the automated extractions"
+output: word_document
+date: "`r format(Sys.time(), '%d %B %Y')`"
+---
+
+The results below are based on a random sample of 40 papers.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, comment='', dpi=400)
+library(dplyr)
+library(tidyr)
+library(flextable)
+library(janitor)
+library(irrCAC) # for Gwet
+library(xtable) # for latex
+
+# used for latex table
+all_agree = NULL
+
+# All data are from Word document checks/5_data_entry_checks_2nd_complete.docx
+```
+
+The tables show the agreement between the automated and manual data extractions.
+
+## Analysis plan
+
+```{r plan}
+tab_data = read.table(header=TRUE, sep=',', text='
+auto,human,n
+false,false,40
+false,true,0
+true,false,0
+true,true,0') %>%
+  mutate(auto = factor(auto, levels = c('false','true')), # to ensure that zeros appear in table
+         human = factor(human, levels = c('false','true'))) %>%
+  uncount(n)
+# make table
+tab = tabyl(tab_data, auto, human)
+names(tab)[1] = ' '
+# agreement
+agree = gwet.ac1.table(tab[, -1])
+#
+ftab = flextable(tab) %>%
+  add_header_row(values=c(' ', rep('Human', 2))) %>%
+  merge_at(i=1, j=2:3, part='header') %>%
+  autofit()
+ftab
+# for latex table
+agree$type = 'Analysis plan'
+all_agree = bind_rows(all_agree, agree)
+```
+
+Analysis plans were very rare.
+
+Gwet's agreement statistic was `r round(agree$coeff.val*100)/100 ` with a confidence interval of `r agree$coeff.ci`.
+
+## Statement on ethics
+
+```{r ethics}
+tab_data = read.table(header=TRUE, sep=',', text='
+auto,human,n
+false,false,11
+false,true,3
+true,false,0
+true,true,26') %>%
+  uncount(n)
+# make table
+tab = tabyl(tab_data, auto, human)
+names(tab)[1] = 'Automated'
+# agreement
+agree = gwet.ac1.table(tab[, -1])
+#
+ftab = flextable(tab) %>%
+  add_header_row(values=c(' ', rep('Human', 2))) %>%
+  merge_at(i=1, j=2:3, part='header') %>%
+  autofit()
+ftab
+# for latex table
+agree$type = 'Ethics'
+all_agree = bind_rows(all_agree, agree)
+```
+
+The three errors were all due to our regular expressions not covering the language used. The expressions were updated.
+
+Gwet's agreement statistic was `r round(agree$coeff.val*100)/100 ` with a confidence interval of `r agree$coeff.ci`.
+
+## EQUATOR check-list
+
+```{r equator}
+tab_data = read.table(header=TRUE, sep=',', text='
+auto,human,n
+false,false,31
+true,true,9') %>%
+  uncount(n)
+# make table
+tab = tabyl(tab_data, auto, human)
+names(tab)[1] = 'Automated'
+# agreement
+agree = gwet.ac1.table(tab[, -1])
+#
+ftab = flextable(tab) %>%
+  add_header_row(values=c(' ', rep('Human', 2))) %>%
+  merge_at(i=1, j=2:3, part='header') %>%
+  autofit()
+ftab
+# for latex table
+agree$type = 'EQUATOR check-list'
+all_agree = bind_rows(all_agree, agree)
+```
+
+Gwet's agreement statistic was `r round(agree$coeff.val*100)/100 ` with a confidence interval of `r agree$coeff.ci`.
+
+## Conflict of interest statement
+
+```{r conflict}
+tab_data = read.table(header=TRUE, sep=',', text='
+auto,human,n
+false,false,7
+false,true,3
+true,false,0
+true,true,30') %>%
+  uncount(n)
+# make table
+tab = tabyl(tab_data, auto, human)
+names(tab)[1] = 'Automated'
+# agreement
+agree = gwet.ac1.table(tab[, -1])
+#
+ftab = flextable(tab) %>%
+  add_header_row(values=c(' ', rep('Human', 2))) %>%
+  merge_at(i=1, j=2:3, part='header') %>%
+  autofit()
+ftab
+# for latex table
+agree$type = 'Conflict of interest'
+all_agree = bind_rows(all_agree, agree)
+```
+
+Two errors occurred because the conflict text was not including in the XML conversion. To avoid this, we also used a PDF version of the text read into R. 
+One error was due to our regular expression not capturing the wording used. The expressions were updated.
+
+Gwet's agreement statistic was `r round(agree$coeff.val*100)/100 ` with a confidence interval of `r agree$coeff.ci`.
+  
+
+## Statement on funding
+
+```{r funding}
+tab_data = read.table(header=TRUE, sep=',', text='
+auto,human,n
+false,false,9
+false,true,6
+true,false,3
+true,true,22') %>%
+  uncount(n)
+# make table
+tab = tabyl(tab_data, auto, human)
+names(tab)[1] = 'Automated'
+# agreement
+agree = gwet.ac1.table(tab[, -1])
+#
+ftab = flextable(tab) %>%
+  add_header_row(values=c(' ', rep('Human', 2))) %>%
+  merge_at(i=1, j=2:3, part='header') %>%
+  autofit()
+ftab
+# for latex table
+agree$type = 'Funding'
+all_agree = bind_rows(all_agree, agree)
+```
+
+The errors were due to:
+
+* False positive due to the authors mentioning the NHMRC but in relation to guidelines.
+* Two false positives because of using "supported by" in the regular expression, which falsely matched to language around claims supporting. This regular expression was removed.
+* Three errors in our regular expressions, missing "awarded" and "specific". The expressions were updated.
+* Two errors occurred because the conflict text was not including in the XML conversion. To avoid this, we also used a PDF version of the text read into R. 
+* One error was because the funding and conflict of interest statements were merged together in the paper and our code was not set up for this.
+
+The three errors were all due to our regular expressions not covering the language used. The expressions were updated.
+
+Gwet's agreement statistic was `r round(agree$coeff.val*100)/100 ` with a confidence interval of `r agree$coeff.ci`.
+
+
+## Study registration
+
+```{r registration}
+tab_data = read.table(header=TRUE, sep=',', text='
+auto,human,n
+false,false,35
+false,true,2
+true,false,0
+true,true,3') %>%
+  uncount(n)
+# make table
+tab = tabyl(tab_data, auto, human)
+names(tab)[1] = 'Automated'
+# agreement
+agree = gwet.ac1.table(tab[, -1])
+#
+ftab = flextable(tab) %>%
+  add_header_row(values=c(' ', rep('Human', 2))) %>%
+  merge_at(i=1, j=2:3, part='header') %>%
+  autofit()
+ftab
+# for latex table
+agree$type = 'Registration'
+all_agree = bind_rows(all_agree, agree)
+```
+
+The two errors were because our regular expression did not include "PROSPERO"; this oversight was fixed.
+
+Gwet's agreement statistic was `r round(agree$coeff.val*100)/100 ` with a confidence interval of `r agree$coeff.ci`.
+
+## Data openly available
+
+```{r open}
+tab_data = read.table(header=TRUE, sep=',', text='
+auto,human,n
+false,false,39
+false,true,0
+true,false,0
+true,true,1') %>%
+  uncount(n)
+# make table
+tab = tabyl(tab_data, auto, human)
+names(tab)[1] = 'Automated'
+# agreement
+agree = gwet.ac1.table(tab[, -1])
+#
+ftab = flextable(tab) %>%
+  add_header_row(values=c(' ', rep('Human', 2))) %>%
+  merge_at(i=1, j=2:3, part='header') %>%
+  autofit()
+ftab
+# for latex table
+agree$type = 'Open data'
+all_agree = bind_rows(all_agree, agree)
+```
+
+Openly available data were rare.
+
+Gwet's agreement statistic was `r round(agree$coeff.val*100)/100 ` with a confidence interval of `r agree$coeff.ci`.
+
+## Papers with a supplement
+
+There were 17 papers of the 40 (`r round(100*17/40)`%) that included a supplement/appendix. 
+One supplement included a protocol, although this was captured by pre-registration. One supplement included an EQUATOR check-list, but this was also captured in the text. The supplements mostly included additional results and tables and, apart from the two stated examples, did not address the 22 questions on research practice.
+
+```{r include=FALSE}
+all_agree = select(all_agree, type, coeff.val, coeff.ci)
+print(xtable(all_agree), include.rownames=FALSE, hline.after=FALSE, file = "reports/6_gwet_automated_extraction.tex")
+```

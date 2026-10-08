@@ -557,8 +557,12 @@ practical_significance = filter(data, q == 'q14b') %>%
 table(practical_significance$answered)
 
 # Q14c: Was there an over-interpretation of the study results, for example, making causal claims from a small observational study ?
-# this question is not processed, instead it's output to AIS experts
-# see 6_read_interpretation.R
+# this question is not processed, instead it's output to AIS experts (see 6_read_interpretation.R)
+# however, what's in the text is Alex's section of the interpretation
+interpretation = filter(data, q == 'q14c') %>%
+  rename('response' = 'comment') %>%
+  select(-q) %>% # no longer needed
+  unique()
 
 ## Check for missing questions
 # put all data together
@@ -663,6 +667,7 @@ save(
   question_answered,
   prior,
   practical_significance,
+  interpretation,
   file = outfile
 )
 

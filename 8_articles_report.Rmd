@@ -11,6 +11,7 @@ library(flextable)
 library(tidyr)
 library(janitor)
 library(stringr)
+library(xtable) # for exporting to latex
 library(binom) # for intervals
 source('99_functions.R') # for CI function
 # plots:
@@ -88,6 +89,31 @@ stats_type = rename(tab, 'var' = 'Study design') %>%
 The "protocol" category was not in our study protocol, but was added after data collection.
 
 The most common study design was an observational study. The "Other" category included audits, editorials, interviews, and position statements. 
+
+
+#### Other study designs
+
+The table below shows the other study designs that were used.
+
+```{r other}
+for_table = filter(type, type == 'Other') %>%
+  mutate(
+    comment = str_remove(comment, 'other, '),
+    comment = str_remove(comment, ' study$'), # remove all 'study'
+    comment = str_replace(comment, '^case$', 'case study'), #
+    comment = str_replace(comment, 'concensus', 'consensus'),
+    comment = str_replace(comment, 'qualitative study', 'interview'),
+    comment = str_replace(comment, 'interview study', 'interview'))
+tab = tabyl(for_table, comment) %>%
+  arrange(desc(n)) %>%
+  adorn_totals(where='row') %>%
+  mutate(percent = round(percent*100)) %>%
+  rename('Other study type' = 'comment') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+```
 
 
 ## Author numbers per paper (Q1b)
@@ -197,6 +223,14 @@ summary_q2a = filter(tab, `Well formed question` == 'Yes') %>%
   mutate(qnum = 'q2a',
          qlabel  = 'Well-formed research question',
          Number = N)
+# numbers for denominator diagram
+denominator_q2a = data.frame(qnum = 'q2a',
+         qlabel  = 'Well-formed research question',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # see 2 exclusions above
+         protocol = 1,
+         review = 1)
 ```
 
 The category of "Purpose/Objective/Statement/Goal" was for papers that used a goal, objective, etc, instead of a research question. 
@@ -290,15 +324,24 @@ summary_q3 = filter(tab, `Previous research` == 'Mentioned but this research jus
   mutate(qnum = 'q3',
          qlabel  = 'Research justified',
          Number = N)
+# numbers for denominator diagram
+# full_join(type, prior, by='doi') %>% group_by(prior, type) %>% tally()
+denominator_q3 = data.frame(qnum = 'q3',
+         qlabel  = 'Research justified',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # sometimes
+         protocol = 1,
+         review = 1)
 ```
 
 Almost all papers (90%) mentioned previous research and gave a reason why this research was justified. 
 
-## Q4a: Was there a study protocol and/or analysis plan? 
+## Q4a: Was there an analysis plan? 
 
 ```{r protocol_exclude, include = FALSE}
-# exclude 
-pattern = 'infographic|editorial|opinion|statement|commentary|protocol' # primer?
+# exclude types that would not need a plan
+pattern = 'infographic|statement|commentary|protocol|case study|primer|guidelines|consensus' # 
 n_exclude = full_join(auto_data, type, by='doi') %>%
   filter(str_detect(comment, pattern)) %>%
   nrow()
@@ -313,8 +356,7 @@ In a change to our protocol, the study protocol question was dropped because for
 
 ```{r protocol}
 for_table = full_join(auto_data, type, by='doi') %>%
-  filter(!str_detect(comment, pattern),
-         doi != '999') # this paper could not be screened as the tool needed a DOI
+  filter(!str_detect(comment, pattern))
 # 
 N = nrow(for_table)
 tab = tabyl(for_table, analysis_plan) %>%
@@ -332,8 +374,16 @@ ftab
 # numbers for summary diagram
 summary_q4a = filter(tab, `Analysis plan` == TRUE) %>%
   mutate(qnum = 'q4a',
+         qlabel  = 'Analysis plan', # not 'study protocol' because of change to our protocol
+         Number = N) 
+# numbers for denominator diagram
+denominator_q4a = data.frame(qnum = 'q4a',
          qlabel  = 'Analysis plan',
-         Number = N)
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # sometimes
+         protocol = 0, # never included
+         review = 1)
 ```
 
 The results show that analysis plans were very rarely used.
@@ -363,9 +413,37 @@ summary_q4b = filter(tab, `Pre-registered` == TRUE) %>%
   mutate(qnum = 'q4b',
          qlabel  = 'Pre-registered',
          Number = N)
+# numbers for denominator diagram; same as above
+denominator_q4b = data.frame(qnum = 'q4b',
+         qlabel  = 'Pre-registered',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # sometimes
+         protocol = 0, # never included
+         review = 1)
 ```
 
 Few studies were pre-registered.
+
+#### Pre-registration by study design
+
+As pre-registration is more standard for experimental studies, the table below shows the percentages by study design.
+
+```{r anzctr2}
+# 
+tab = tabyl(for_table, type, registration) %>%
+  mutate(N = `TRUE` + `FALSE`,
+    percent = round(`TRUE`/N*1000)/10,
+    cell = paste(`TRUE`, '/', N, ' (', percent,')', sep='')) %>%
+  select(type, cell) %>%
+  rename('Study type' = 'type',
+         'n/N (%)' = 'cell') 
+ftab = flextable(tab) %>%
+  theme_box() %>%
+  autofit()
+ftab
+```
+
 
 # Section 4: Sample size
 
@@ -395,6 +473,14 @@ summary_q5a = filter(tab, `Sample size calculation` == 'Yes') %>%
   mutate(qnum = 'q5a',
          qlabel  = 'Sample size calculation',
          Number = N)
+# numbers for denominator diagram
+denominator_q5a = data.frame(qnum = 'q5a',
+         qlabel  = 'Sample size calculation',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # sometimes
+         protocol = 1,
+         review = 0)
 ```
 
 Many studies did not give a sample size calculation. 
@@ -427,6 +513,14 @@ summary_q5b = filter(tab, `Effect size justified` == 'Yes') %>%
   mutate(qnum = 'q5b',
          qlabel  = 'Effect size justified in sample size calculation',
          Number = N)
+# numbers for denominator diagram; same as above
+denominator_q5b = data.frame(qnum = 'q5a',
+         qlabel  = 'Effect size justified in sample size calculation',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # sometimes
+         protocol = 1,
+         review = 0)
 ```
 
 Over half of studies with a sample size calculation provided a justification for the sample size. 
@@ -440,10 +534,10 @@ We only included papers that had a sample size calculation.
 
 ```{r target}
 # could split by type (but too small)
-for_stats = full_join(sample_size_target, sample_size, by='doi') %>%
+for_stats_target = full_join(sample_size_target, sample_size, by='doi') %>%
   filter(any_sample_size == 'Yes')
 #
-stats = summarise(for_stats,
+stats_target = summarise(for_stats_target,
             N = n(), 
             Missing = sum(is.na(number)),
             Min = min(number, na.rm = TRUE),
@@ -451,12 +545,20 @@ stats = summarise(for_stats,
             Median = round(quantile(number, 0.5, na.rm = TRUE)),
             Q3 = round(quantile(number, 0.75, na.rm = TRUE)),
             Max = round(max(number, na.rm = TRUE))) 
-ftab = flextable(stats) %>%
+ftab = flextable(stats_target) %>%
   theme_box() %>%
   autofit()
 ftab
 # missing numbers for summary
-missing_q5c = select(stats, Missing, N) %>% mutate(qnum = '5c')
+missing_q5c = select(stats_target, Missing, N) %>% mutate(qnum = '5c')
+# numbers for denominator diagram; same as above
+denominator_q5c = data.frame(qnum = 'q5c',
+         qlabel  = 'Target sample size',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # sometimes
+         protocol = 0,
+         review = 0)
 ```
 
 Many target sample sizes were small with a median target sample size of just 18.
@@ -468,12 +570,12 @@ We excluded papers where the sample size was not applicable (reviews, protocols,
 
 ```{r actual}
 #
-for_stats = select(sample_size_actual, -comment) %>%
+for_stats_actual = select(sample_size_actual, -comment) %>%
   full_join(type, by='doi') %>%
   filter(!type %in% c('Protocol','Review'),
          !str_detect(comment, 'infographic|editorial|opinion|position|consensus'))
 #
-stats = summarise(for_stats,
+stats_actual = summarise(for_stats_actual,
             N = n(), 
             Missing = sum(is.na(number)),
             Min = min(number, na.rm = TRUE),
@@ -481,12 +583,24 @@ stats = summarise(for_stats,
             Median = round(quantile(number, 0.5, na.rm = TRUE)),
             Q3 = round(quantile(number, 0.75, na.rm = TRUE)),
             Max = round(max(number, na.rm = TRUE)))  
-ftab = flextable(stats) %>%
+ftab = flextable(stats_actual) %>%
   theme_box() %>%
   autofit()
 ftab
 # missing numbers for summary
-missing_q5d = select(stats, Missing, N) %>% mutate(qnum = '5d')
+missing_q5d = select(stats_actual, Missing, N) %>% mutate(qnum = '5d')
+# export to latex
+for_latex = bind_rows(stats_target, stats_actual, .id = 'sample') %>%
+  mutate(sample = ifelse(sample == 1, "Target", 'Actual'))
+print(xtable(for_latex, digits=0), include.rownames=FALSE, hline.after=FALSE, file = "reports/8_sample_size.tex")
+# numbers for denominator diagram; same as above
+denominator_q5d = data.frame(qnum = 'q5d',
+         qlabel  = 'Actual sample size',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # sometimes
+         protocol = 0,
+         review = 0)
 ```
 
 Many actual sample sizes were small with a median sample size of just 30.
@@ -497,7 +611,7 @@ The actual sample size can vary greatly by study design, hence we a boxplot to s
 
 ```{r actual_by_type, fig.height=4}
 colours = c("cornsilk2", "aquamarine3", "dodgerblue")
-bplot = ggplot(data = for_stats, aes(x = factor(type), y = number, fill = factor(type)))+
+bplot = ggplot(data = for_stats_actual, aes(x = factor(type), y = number, fill = factor(type)))+
   geom_boxplot()+
   scale_fill_manual(NULL, values = colours) + 
   scale_y_log10()+
@@ -594,7 +708,9 @@ This question was evaluated by the research assistant. All tables and graphs bel
 
 ```{r gender_table}
 #
-for_stats = filter(gender, gender_not_applicable == FALSE) %>%
+for_table = left_join(gender, type, by = 'doi')
+for_stats = filter(for_table, gender_not_applicable == FALSE) %>%
+  filter(!type == 'Protocol') %>% # one protocol where planned numbers are given
   select(doi, female, male) %>%
   filter(female + male > 0) %>% # only those studies where there was a gender breakdown
   pivot_longer(-doi, values_to = 'number', names_to = 'gender') 
@@ -611,6 +727,15 @@ ftab = flextable(stats) %>%
   theme_box() %>%
   autofit()
 ftab
+# numbers for denominator diagram; same as above
+# full_join(type, gender, by='doi') %>% group_by(gender_not_applicable, type) %>% tally()
+denominator_q6 = data.frame(qnum = 'q6',
+         qlabel  = 'Male/female participants',
+         experimental = 1,
+         observational = 1, #
+         other = 0.5, # sometimes
+         protocol = 0,
+         review = 0)
 ```
 
 The table above shows the summary statistics on the number of males and females. We only show the statistics for those studies where information was given on the number of males and/or females.
@@ -716,11 +841,14 @@ Some studies did not report the number of male and female participants.
 ## Q7: Was ethical clearance mentioned or was there a statement on why ethical clearance was not needed?  
 
 The data for this question was extracted using an automated search of the PDFs. 
-We removed studies where gender was not relevant (e.g., reviews) or not reported. 
+We removed reviews, commentaries, editorials, infographics.
 
 ```{r ethics}
+# exclude types that would not need ethics
+pattern = 'infographic|statement|commentary|protocol|primer|guidelines|consensus' # 
 for_table = full_join(auto_data, type, by='doi') %>%
-  filter(type != 'Review', doi!='999') # remove paper that was not in automated data
+  filter(!str_detect(comment, pattern))  %>%
+  filter(type != 'Review') 
 N = nrow(for_table)
 # 
 tab = tabyl(for_table, ethics) %>%
@@ -740,6 +868,14 @@ summary_q7 = filter(tab, `Ethics statement` == TRUE) %>%
   mutate(qnum = 'q7',
          qlabel  = 'Ethics statement',
          Number = N)
+# numbers for denominator diagram
+denominator_q7 = data.frame(qnum = 'q7',
+         qlabel  = 'Ethics statement',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # 
+         protocol = 1, 
+         review = 0)
 ```
 
 Most studies included a statement regard ethics approval, which includes stating why ethical approval was not needed. 
@@ -750,11 +886,16 @@ The ethics committees mentioned are shown in the appendix below.
 
 The data for this question was extracted using an automated search of the PDFs. 
 The original question in the protocol was "Was there a data availability statement?"; however, we changed this to the more strict criterion of whether the data was openly shared. This is a stronger test of transparency. 
+We removed studies types that would not include original data to share, including protocols, editorials, opinions, or commentaries.
 
 ```{r data}
-N = nrow(open_data_results)
+# exclude types that would not need to share data
+pattern = 'infographic|statement|commentary|protocol|case study|primer|guidelines|consensus' # 
+for_table = full_join(open_data_results, type, by='doi') %>%
+  filter(!str_detect(comment, pattern))
+N = nrow(for_table)
 # 
-tab = tabyl(open_data_results, is_open_data) %>%
+tab = tabyl(for_table, is_open_data) %>%
   arrange(desc(n)) %>%
   adorn_totals(where='row') %>%
   add_intervals(N = N) %>%
@@ -771,6 +912,14 @@ summary_q8 = filter(tab, `Data statement` == TRUE) %>%
   mutate(qnum = 'q8',
          qlabel  = 'Openly available data',
          Number = N)
+# numbers for denominator diagram
+denominator_q8 = data.frame(qnum = 'q8',
+         qlabel  = 'Openly available data',
+         experimental = 1,
+         observational = 1,
+         other = 0.5, # not editorial
+         protocol = 1, 
+         review = 1)
 ```
 
 Very few studies openly shared data. We manually checked the five papers that assessed to have open data and there was a stated use of a data despository for every paper. However, we did not download the data and check if the data matched those used in the paper. 
@@ -805,6 +954,14 @@ summary_q9a = filter(tab, `Conflict statement` == TRUE) %>%
   mutate(qnum = 'q9a',
          qlabel  = 'Conflict statement',
          Number = N)
+# numbers for denominator diagram
+denominator_q9a = data.frame(qnum = 'q9a',
+         qlabel  = 'Conflict statement',
+         experimental = 1,
+         observational = 1,
+         other = 1,  
+         protocol = 1, 
+         review = 1)
 ```
 
 #### Funding
@@ -829,6 +986,14 @@ summary_q9b = filter(tab, `Funding statement` == TRUE) %>%
   mutate(qnum = 'q9b',
          qlabel  = 'Funding statement',
          Number = N)
+# numbers for denominator diagram
+denominator_q9b = data.frame(qnum = 'q9b',
+         qlabel  = 'Funding statement',
+         experimental = 1,
+         observational = 1,
+         other = 1,  
+         protocol = 1, 
+         review = 1)
 ```
 
 The majority of papers did report on funding and conflicts of interest.
@@ -859,6 +1024,15 @@ summary_q10 = filter(tab, `Discussed` == 'Yes') %>%
   mutate(qnum = 'q10',
          qlabel  = 'Missing data discussed',
          Number = N)
+# numbers for denominator diagram
+# full_join(type, missing, by='doi') %>% group_by(discussed, type) %>% tally()
+denominator_q10 = data.frame(qnum = 'q10',
+         qlabel  = 'Missing data discussed',
+         experimental = 1,
+         observational = 1,
+         other = 0.5,  
+         protocol = 0, 
+         review = 0)
 ```
 
 Missing data were often not discussed. 
@@ -899,6 +1073,15 @@ summary_q11 = mutate(for_table,
   mutate(qnum = 'q11',
          qlabel  = 'Outliers not removed or removed with justification',
          Number = N)
+# numbers for denominator diagram
+# full_join(type, outliers, by='doi') %>% group_by(outliers, type) %>% tally()
+denominator_q11 = data.frame(qnum = 'q11',
+         qlabel  = 'Outliers not removed or removed with justification',
+         experimental = 1,
+         observational = 1,
+         other = 0.5,  
+         protocol = 0, 
+         review = 0)
 ```
 
 Most papers did not remove outliers. When outliers were removed, there were seven papers that did this without justification. An example quote is "one athlete was removed from the final analysis as the subject was identified as an extreme outlier". This is not an adequate justification for exclusion as outliers can occur in real data and exclusions should only occur for data that is believed to be an error. 
@@ -927,6 +1110,14 @@ summary_q12 = filter(tab, `Checklist` == TRUE) %>%
   mutate(qnum = 'q12',
          qlabel  = 'EQUATOR checklist used',
          Number = N)
+# numbers for summary diagram
+denominator_q12 = data.frame(qnum = 'q12',
+         qlabel  = 'EQUATOR checklist used',
+         experimental = 1,
+         observational = 1,
+         other = 1,  
+         protocol = 1, 
+         review = 1)
 ```
 
 Most studies did not mention using a reporting guideline.
@@ -960,6 +1151,14 @@ summary_q13 = tabyl(auto_data, is_oa) %>%
   mutate(qnum = 'q13',
          qlabel  = 'Any open access version available',
          Number = N)
+# numbers for summary diagram
+denominator_q13 = data.frame(qnum = 'q13',
+         qlabel  = 'Any open access version available',
+         experimental = 1,
+         observational = 1,
+         other = 1,  
+         protocol = 1, 
+         review = 1)
 ```
 
 Over half the papers were open access.
@@ -991,6 +1190,15 @@ summary_q14a = filter(tab, `Answered` == 'Yes') %>%
   mutate(qnum = 'q14a',
          qlabel  = 'Research question answered',
          Number = N)
+# numbers for summary diagram
+# full_join(type, question_answered, by='doi') %>% group_by(answered, type) %>% tally()
+denominator_q14a = data.frame(qnum = 'q14a',
+         qlabel  = 'Research question answered',
+         experimental = 1, # bit more complex because some studies were excluded for this question because they did not have an aim/question
+         observational = 1,
+         other = 1,  
+         protocol = 0, 
+         review = 1)
 ```
 
 Almost every paper answered their question or aim.
@@ -1020,17 +1228,30 @@ summary_q14b = filter(tab, `Answered` == 'Yes') %>%
   mutate(qnum = 'q14b',
          qlabel  = 'Reflection on practical significance',
          Number = N)
+# numbers for summary diagram
+# full_join(type, practical_significance, by='doi') %>% group_by(answered, type) %>% tally()
+denominator_q14b = data.frame(qnum = 'q14b',
+         qlabel  = 'Reflection on practical significance',
+         experimental = 1, # 
+         observational = 1,
+         other = 1,  
+         protocol = 0, 
+         review = 1)
 ```
 
 Most papers gave some reflection on practical significance. 
 
-## Q14c: Was there an over-interpretation of the study results, for example, making causal claims from a small observational study ? 
+## Q14c: Was there an over-interpretation of the study results, for example, making causal claims from a small observational study? 
 
-This question was evaluated by the two experts in the field. Not all papers were examined. 
+This question was evaluated by the two experts in the field. We excluded protocols, infographics, and statements. 
 
 ```{r interpretation}
-# waiting on data from david and Paolo
-for_table = filter(interpretation, !is.na(interpretation))
+# exclude types that would not need interpretation
+pattern = 'infographic|primer|statement' # 
+interpretation = select(interpretation, -comment) # not needed
+for_table = full_join(interpretation, type, by='doi') %>%
+  filter(!str_detect(comment, pattern), type != 'Protocol') %>% # excluding protocols
+  filter(!is.na(interpretation), ) 
 N = nrow(for_table)
 # 
 tab = tabyl(for_table, interpretation) %>%
@@ -1050,6 +1271,14 @@ summary_q14c = filter(tab, `Interpretation` == FALSE) %>%
   mutate(qnum = 'q14c',
          qlabel  = 'No over-interpretation of the study results',
          Number = N)
+# numbers for summary diagram
+denominator_q14c = data.frame(qnum = 'q14c',
+         qlabel  = 'No over-interpretation of the study results',
+         experimental = 1, # 
+         observational = 1,
+         other = 1,  
+         protocol = 0, 
+         review = 1)
 ```
 
 Some papers were judged to have over-interpreted the study results. 
@@ -1109,25 +1338,12 @@ splot = ggplot(data = for_plot_summary, aes(x = x, y = percent, ymin = lower, ym
   coord_flip()
 splot
 # export
-ggsave(plot = splot, filename = 'figures/8_summary_diagram.jpg', width=5.5, height=6, units='in', dpi=500)
+ggsave(plot = splot, filename = 'figures/8_summary_diagram.jpg', width=5.5, height=5.4, units='in', dpi=500)
 ```
 
 # Bibliographic data
 
 In this section we examine bibliographic data on the papers.
-
-## Word cloud of titles
-
-```{r wordcloud}
-# can't fix plot region
-min_count = 4 # minimum number of words for clouds
-source('8_wordcloud.R')
-# show cloud
-TeachingDemos::char2seed('wrexham')
-textplot_wordcloud(mydfm, max_words = 100, min_count = min_count, color = colors)
-```
-
-Words must have been mentioned `r min_count` times to be in the cloud. 
 
 ## Most common topics (top 10)
 
@@ -1340,7 +1556,6 @@ ftab = flextable(big_table) %>%
   autofit()
 ftab
 # export to latex
-library(xtable)
 print(xtable(big_table), include.rownames=FALSE, hline.after=FALSE, file = "reports/8_big_table.tex")
 ```
 
@@ -1350,7 +1565,8 @@ print(xtable(big_table), include.rownames=FALSE, hline.after=FALSE, file = "repo
 for_table_summary = mutate(for_plot_summary, 
                            numbers = paste0(n, '/', Number),
                            ci = paste0(lower, ', ', upper)) %>%
-  select(comb_label, numbers, percent, ci)
+  arrange(desc(percent)) %>% # to match figure (high to low)
+  select(comb_label, numbers, percent, ci) 
 ftab = flextable(for_table_summary) %>%
   theme_box() %>%
   autofit()
@@ -1358,6 +1574,71 @@ ftab
 # export to latex
 print(xtable(for_table_summary, digits=0), include.rownames=FALSE, hline.after=FALSE, file = "reports/8_outcomes_table.tex")
 ```
+
+## Question denominators
+
+The tile plot below shows which studies were included for which questions. For example, reviews are not expected to have a sample size calculation and so were excluded for that question. The ``Other'' study category included a wide mix of studies and hence whether these studies were included often depended on more detailed information. This meant that the Other study category often included a mix of included and excluded papers.
+
+```{r denominator}
+# get numbers for axis label
+label_stats = group_by(type, type) %>% 
+  summarise(n = n()) %>%
+  mutate(name = case_when(  # for merge
+    type == 'Experimental study' ~ 'experimental',
+    type == 'Observational study' ~ 'observational',
+    type == 'Other' ~ 'other',
+    type == 'Protocol' ~ 'protocol',
+    type == 'Review' ~ 'review'
+  ))
+# combine summaries (means and CIs)
+for_plot_denominator = bind_rows(
+  denominator_q2a, 
+  denominator_q3,
+  denominator_q4a,
+  denominator_q4b,
+  denominator_q5a,
+  denominator_q5b,
+  denominator_q5c,
+  denominator_q5d,
+  denominator_q6,
+  denominator_q7,
+  denominator_q8,
+  denominator_q9a,
+  denominator_q9b,
+  denominator_q10,
+  denominator_q11,
+  denominator_q12,
+  denominator_q13,
+  denominator_q14a,
+  denominator_q14b,
+  denominator_q14c) %>% 
+  mutate(x = 1:n()) %>%
+  pivot_longer(-c(x, qnum, qlabel)) %>%
+  mutate(comb_label = paste(qnum, '. ', qlabel, sep=''),
+        comb_label = str_remove(comb_label, '^q')) %>%
+  left_join(label_stats, by='name') %>%
+  mutate(name = paste(str_to_sentence(name),'\n(n = ', n, ')', sep=''))
+colours = c('azure','skyblue','navy') # not used, sometimes, used
+# 
+labels = select(for_plot_denominator, x, comb_label) %>% unique()
+dplot = ggplot(data = for_plot_denominator, aes(x = x, y = name, fill = factor(value))) +
+  geom_tile(col = 'grey77')+
+  scale_fill_manual("Included", labels=c('No','Partial','Yes'), values = colours)+
+  scale_x_reverse(expand = 0, breaks = 1:nrow(labels), labels = labels$comb_label)+
+  scale_y_discrete(expand = 0)+
+  g.theme+
+  theme(
+    axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1),
+    font = element_text(size = 16))+
+  xlab(NULL)+
+  ylab(NULL)+
+  coord_flip()
+dplot
+# export
+ggsave(plot = dplot, filename = 'figures/8_denominator_diagram.jpg', width=6.5, height=5.4, units='in', dpi=500)
+```
+
+For Q14, there were some papers that were excluded because they did not have a research question or aim. This included some experimental and observational studies, although they were not excluded based on the study type. 
 
 ## Missing data
 

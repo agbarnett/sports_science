@@ -18,9 +18,8 @@ compare_names = function(name1, name2){
 find_and_extract_xml = function(
   intext, # data frame
   in_pattern, # pattern to find
-  upper = FALSE
+  upper = FALSE # using upper case text
 ) {
-  # using upper case text
   was_found = FALSE
   extract_text = '' # start blank
 
@@ -45,6 +44,48 @@ find_and_extract_xml = function(
     extract_text = pull(found, text) %>% paste(collapse = ' ')
   }
 
+  to.return = data.frame(was_found = was_found, extract_text = extract_text)
+  return(to.return)
+} # End of function
+
+## function to find pattern and extract relevant text from text processed by XMLs and PDF
+# called by 5_read_pdf_files_to_xml_automate_plus_PDF.R
+find_and_extract_xml_and_pdf = function(
+    intext, # data frame for XML
+    inpdf, # character
+    in_pattern, # pattern to find
+    upper = FALSE   # using upper case text
+) {
+  was_found = FALSE
+  extract_text = '' # start blank
+  
+  # run search
+  if (upper == FALSE) {
+    found_xml = filter(
+      intext,
+      str_detect(lower_text, pattern = in_pattern) | # look in text ...
+        str_detect(tolower(header), pattern = in_pattern) # ... and header (e.g., "conflict of interest" as a sub-header)
+    )
+    found_pdf = str_detect(tolower(inpdf), pattern = in_pattern) 
+  }
+  if (upper == TRUE) {
+    found_xml = filter(
+      intext,
+      str_detect(text, pattern = in_pattern) |
+        str_detect(header, pattern = in_pattern)
+    )
+    found_pdf = str_detect(inpdf, pattern = in_pattern) 
+  }
+  was_found = nrow(found_xml) > 0 | found_pdf == TRUE
+  if (was_found == TRUE) {
+    # get all sentences; could add full stop to sentences that do not have one.
+    extract_text = pull(found_xml, text) %>% paste(collapse = ' ')
+    # if XML is blank then use PDF
+    if(extract_text == ''){
+      extract_text = str_extract_all(inpdf, pattern = in_pattern) %>% paste(collapse = ' ')
+    }
+  }
+  
   to.return = data.frame(was_found = was_found, extract_text = extract_text)
   return(to.return)
 } # End of function
