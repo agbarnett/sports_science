@@ -341,7 +341,7 @@ Almost all papers (90%) mentioned previous research and gave a reason why this r
 
 ```{r protocol_exclude, include = FALSE}
 # exclude types that would not need a plan
-pattern = 'infographic|statement|commentary|protocol|case study|primer|guidelines|consensus' # 
+pattern = 'infographic|editorial|opinion|statement|commentary|protocol|case study|primer|guidelines|consensus' # 
 n_exclude = full_join(auto_data, type, by='doi') %>%
   filter(str_detect(comment, pattern)) %>%
   nrow()
@@ -356,7 +356,8 @@ In a change to our protocol, the study protocol question was dropped because for
 
 ```{r protocol}
 for_table = full_join(auto_data, type, by='doi') %>%
-  filter(!str_detect(comment, pattern))
+  filter(!str_detect(comment, pattern),
+         doi != '999') # this paper could not be screened as the tool needed a DOI
 # 
 N = nrow(for_table)
 tab = tabyl(for_table, analysis_plan) %>%
@@ -443,7 +444,6 @@ ftab = flextable(tab) %>%
   autofit()
 ftab
 ```
-
 
 # Section 4: Sample size
 
@@ -663,11 +663,40 @@ b2plot = ggplot(data = for_paper, aes(x = factor(x), y = number, fill = factor(x
   theme(legend.position = 'none')
 #
 ggsave(plot = b2plot, filename = 'figures/8_sample_size.jpg', width = 5.8, height= 4.5, units = 'in', dpi=500)
+# EPS version
+ggsave(plot = b2plot, filename = 'figures/8_sample_size.eps', width = 5.8, height= 4.5, units = 'in', device = 'eps')
 ```
 
 Observational studies had generally larger sample size and had most of the very large studies.
 The studies with a sample size of one were case studies. 
 There were no experimental studies with a sample size over 100.
+
+#### Plot using a non-logged scale
+
+```{r}
+# plot without log
+b2plot = ggplot(data = for_paper, aes(x = factor(x), y = number, fill = factor(x)))+
+  geom_boxplot()+
+  scale_fill_manual(NULL, values = colours) + 
+  scale_x_discrete(labels = numbers$label)+
+  scale_y_continuous(limits = c(0,300))+ # exclude very large trials
+  xlab(NULL)+
+  ylab('Sample size')+
+  geom_vline(xintercept=2.5, lty=2, col='grey77')+
+  geom_vline(xintercept=4.5, lty=2, col='grey77')+
+  coord_flip()+
+  g.theme +
+  theme(legend.position = 'none')
+b2plot
+#
+ggsave(plot = b2plot, filename = 'figures/8_sample_size_not_logged.jpg', width = 5.8, height= 4.5, units = 'in', dpi=500)
+# for text
+n_ex = filter(for_paper, !is.na(number), number>300) %>% nrow()
+p_ex = round(100*n_ex / nrow(for_paper))
+```
+
+This is an alternative plot that uses a linear instead of a log scale. To avoid most results being squashed, the upper limit is at 300. This meant that `r n_ex` papers (`r p_ex`%) were excluded from the plot.
+
 
 ## Q5c and Q5d: Comparing the target and actual sample size
 
@@ -701,6 +730,10 @@ The scatter plot compares the target and actual sample sizes. The studies that w
 The plot includes a diagonal line of agreement. 
 We have used a log scale for both axes because of the strong positive skew in sample sizes with a few very large studies. 
 There were more studies that exceeded their sample size than were under.
+
+
+
+
 
 ## Q6: How many participants were male and female? 
 
@@ -769,6 +802,8 @@ gplot = ggplot(data = for_plot, aes(x=female+1, y=male+1))+ # +1 to avoid zeros 
 gplot
 # export
 ggsave(plot = gplot, filename = 'figures/8_gender.jpg', width=5, height=5, units='in', dpi=500)
+# eps version
+ggsave(plot = gplot, filename = 'figures/8_gender.eps', width=5, height=5, units='in', device = 'eps')
 # for text
 n_removed = filter(gender, gender_not_applicable == TRUE | gender_not_reported  == TRUE) %>% nrow()
 ```
@@ -845,10 +880,10 @@ We removed reviews, commentaries, editorials, infographics.
 
 ```{r ethics}
 # exclude types that would not need ethics
-pattern = 'infographic|statement|commentary|protocol|primer|guidelines|consensus' # 
+pattern = 'infographic|editorial|opinion|statement|commentary|protocol|primer|guidelines|consensus' # 
 for_table = full_join(auto_data, type, by='doi') %>%
   filter(!str_detect(comment, pattern))  %>%
-  filter(type != 'Review') 
+  filter(type != 'Review', doi!='999') # remove paper that was not in automated data
 N = nrow(for_table)
 # 
 tab = tabyl(for_table, ethics) %>%
@@ -890,7 +925,7 @@ We removed studies types that would not include original data to share, includin
 
 ```{r data}
 # exclude types that would not need to share data
-pattern = 'infographic|statement|commentary|protocol|case study|primer|guidelines|consensus' # 
+pattern = 'infographic|editorial|opinion|statement|commentary|protocol|case study|primer|guidelines|consensus' # 
 for_table = full_join(open_data_results, type, by='doi') %>%
   filter(!str_detect(comment, pattern))
 N = nrow(for_table)
@@ -1339,6 +1374,8 @@ splot = ggplot(data = for_plot_summary, aes(x = x, y = percent, ymin = lower, ym
 splot
 # export
 ggsave(plot = splot, filename = 'figures/8_summary_diagram.jpg', width=5.5, height=5.4, units='in', dpi=500)
+# eps version
+ggsave(plot = splot, filename = 'figures/8_summary_diagram.eps', width=5.5, height=5.4, units='in', device = "eps")
 ```
 
 # Bibliographic data
