@@ -2,6 +2,7 @@
 
 The numbers at the start of the file name correspond to the R code files and are in execution order. Files are in R format (RData) or Excel.
 
+
 * `1_articles.RData` = read the papers from the AIS from `1_read_ais_papers.R`
 * `1_pubmed_papers.RData` = search research from PubMed from `1_search_pubmed.R`
 * `1_scopus_papers.RData` = search research from Scopus from `1_search_scopus.R`
@@ -41,6 +42,7 @@ The numbers at the start of the file name correspond to the R code files and are
 
 * `7_analysis.RData` = main analysis data from `7_combine_data.R`
 * `7_analysis.xlsx` = main analysis data in Excel format, separate sheet for each question `7_combine_data.R`
+* `data_dictionary.docx` = data dictionary for analysis files
 
 ~
 
