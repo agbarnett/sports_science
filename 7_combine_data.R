@@ -27,7 +27,7 @@ load('data/5_automated.RData') # files: "auto_data"
 #load('data/6_departments.RData')
 
 # from 5_read_pdf_comments_by_RA.R
-load('data/5_audit.RData') # 'ais_authors', 'framework', 'gender', 'interpretation', 'long', 'missing', 'outliers', 'practical_significance', 'question', 'question_answered', 'question_number', 'sample_size', 'sample_size_actual', 'sample_size_justified', 'type'
+load('data/5_audit.RData') # 'ais_authors', 'gender', 'interpretation', 'long', 'missing', 'outliers', 'practical_significance', 'question', 'question_answered', 'question_number', 'sample_size', 'sample_size_actual', 'sample_size_justified', 'type'
 remove(interpretation) # text interpretation from Alex, should be over-written by interpretation below
 
 # from 5_data_code_oddpub.R (mentions of data and code)
@@ -72,7 +72,7 @@ save(
   "topics",
   "auto_data",
   'ais_authors',
-  'framework',
+  #  'framework', # not used, so not saved
   'gender',
   'interpretation',
   'missing',
@@ -100,7 +100,7 @@ sheets_to_export = c(
   "topics",
   "auto_data",
   'ais_authors',
-  'framework',
+  #  'framework', # not used, so not saved
   'gender',
   'interpretation',
   'missing',

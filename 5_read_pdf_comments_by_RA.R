@@ -455,8 +455,7 @@ gender = filter(data, q == 'q6') %>%
     male = ifelse(is.na(male), 0, male), # NAs to zero
     other = as.numeric(other),
     other = ifelse(is.na(other), 0, other), # NAs to zero
-    female_only = male == 0 & other == 0,
-    female > 0,
+    female_only = male == 0 & other == 0 & female > 0,
     male_only = male > 0 & female == 0 & other == 0
   ) %>%
   select(-q, -comment) %>% # no longer needed
